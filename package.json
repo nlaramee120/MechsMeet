@@ -18,5 +18,11 @@
     "express": "^4.17.1",
     "mongoose": "^5.11.6",
     "graphql": "^15.5.1"
+  },
+  "dependencies": {
+    "@stripe/react-stripe-js": "^1.7.0",
+    "@stripe/stripe-js": "^1.22.0",
+    "axios": "^0.24.0",
+    "stripe": "^8.195.0"
   }
 }
