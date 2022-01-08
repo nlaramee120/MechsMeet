@@ -74,7 +74,7 @@ export default function PaymentForm() {
            <h2>Purchase Successful!</h2>
        </div> 
         }
-            
+        
         </> 
     )
 }
