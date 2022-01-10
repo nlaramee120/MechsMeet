@@ -1,13 +1,29 @@
 const db = require('../config/connection');
-const { Tech } = require('../models');
+// const { Tech } = require('../models');
+const { Profile } = require('../models');
+const profileSeeds = require('./profileSeeds.json');
 
-const techData = require('./techData.json');
+
+// const techData = require('./techData.json');
 
 db.once('open', async () => {
-  await Tech.deleteMany({});
+  try {
+    await Profile.deleteMany({});
+    await Profile.create(profileSeeds);
 
-  const technologies = await Tech.insertMany(techData);
-
-  console.log('Technologies seeded!');
-  process.exit(0);
+    console.log('all done!');
+    process.exit(0);
+  } catch (err) {
+    throw err;
+  }
 });
+
+
+// db.once('open', async () => {
+//   await Tech.deleteMany({});
+
+//   const technologies = await Tech.insertMany(techData);
+
+//   console.log('Technologies seeded!');
+//   process.exit(0);
+// });
