@@ -1,0 +1,31 @@
+[
+    {
+      "name": "Brian Kernighan",
+      "skills": ["Brake Service", "Suspension", "General Checkup"]
+    },
+    {
+      "name": "Max Kanat-Alexander",
+      "skills": ["Headlights", "Brake", "General Checkup"]
+    },
+    {
+      "name": "Amiko",
+      "skills": ["General Checkup"]
+    },
+    {
+      "name": "Kent Beck",
+      "skills": [
+        "Oil Change",
+        "Paint Job"]
+    },
+    {
+      "name": "Edward V. Berard",
+      "skills": ["Emissions Test"]
+    },
+    {
+      "name": "Alan Kay",
+      "skills": [
+        "Oil Change"
+      ]
+    }
+  ]
+  
