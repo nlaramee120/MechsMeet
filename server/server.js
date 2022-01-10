@@ -13,7 +13,8 @@ const server = new ApolloServer({
 
 server.applyMiddleware({ app });
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
+//we can change this to true but I think with our files it has to be false
 app.use(express.json());
 
 // if we're in production, serve client/build as static assets
