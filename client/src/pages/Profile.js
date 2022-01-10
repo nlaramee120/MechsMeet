@@ -26,7 +26,7 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-        {profile.name}'s friends have endorsed these skills...
+        {profile.name} has been endorsed for these skills...
       </h2>
 
       {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
