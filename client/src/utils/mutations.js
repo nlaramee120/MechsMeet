@@ -20,7 +20,6 @@ export const ADD_SKILL = gql`
   }
 `;
 
-
 // export const CREATE_MATCHUP = gql`
 //   mutation createMatchup($tech1: String!, $tech2: String!) {
 //     createMatchup(tech1: $tech1, tech2: $tech2) {

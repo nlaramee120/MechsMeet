@@ -1,10 +1,6 @@
 const db = require('../config/connection');
-// const { Tech } = require('../models');
 const { Profile } = require('../models');
 const profileSeeds = require('./profileSeeds.json');
-
-
-// const techData = require('./techData.json');
 
 db.once('open', async () => {
   try {
@@ -17,7 +13,6 @@ db.once('open', async () => {
     throw err;
   }
 });
-
 
 // db.once('open', async () => {
 //   await Tech.deleteMany({});
