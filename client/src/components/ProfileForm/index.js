@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
 
-import { ADD_PROFILE } from '../../utils/mutations';
-import { QUERY_PROFILES } from '../../utils/queries';
+import { ADD_PROFILE } from "../../utils/mutations";
+import { QUERY_PROFILES } from "../../utils/queries";
 import "./ProfileForm.css";
 
 const ProfileForm = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   const [addProfile, { error }] = useMutation(ADD_PROFILE, {
     update(cache, { data: { addProfile } }) {
@@ -31,7 +32,7 @@ const ProfileForm = () => {
         variables: { name },
       });
 
-      setName('');
+      setName("");
     } catch (err) {
       console.error(err);
     }
@@ -41,13 +42,18 @@ const ProfileForm = () => {
     <div>
       <h3>Are you a mechanic?</h3>
       <form
-        className="flex-row justify-center justify-space-between-md align-center"
+        className="signupFormCont flex-row justify-center justify-space-between-md align-center"
         onSubmit={handleFormSubmit}
       >
         <div className="col-12 col-lg-3">
-          <button className="btn btn-primary" type="submit">
-            Start offering your services now!
-          </button>
+          <Link className="btn btn-primary" to="/signup">
+            <h1
+              className="m-1"
+              style={{ fontSize: "1rem", textAlign: "center" }}
+            >
+              Start offering your services now!
+            </h1>
+          </Link>
         </div>
         {error && (
           <div className="col-12 my-3 bg-danger text-white p-3">
@@ -60,12 +66,12 @@ const ProfileForm = () => {
 
   // const ProfileForm = () => {
   //   const [name, setName] = useState('');
-  
+
   //   const [addProfile, { error }] = useMutation(ADD_PROFILE, {
   //     update(cache, { data: { addProfile } }) {
   //       try {
   //         const { profiles } = cache.readQuery({ query: QUERY_PROFILES });
-  
+
   //         cache.writeQuery({
   //           query: QUERY_PROFILES,
   //           data: { profiles: [...profiles, addProfile] },
@@ -75,15 +81,15 @@ const ProfileForm = () => {
   //       }
   //     },
   //   });
-  
+
   //   const handleFormSubmit = async (event) => {
   //     event.preventDefault();
-  
+
   //     try {
   //       const { data } = await addProfile({
   //         variables: { name },
   //       });
-  
+
   //       setName('');
   //     } catch (err) {
   //       console.error(err);
