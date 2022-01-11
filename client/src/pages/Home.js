@@ -16,7 +16,7 @@ const Home = () => {
       <div className="flex-row justify-center">
         <div
           className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
+          style={{ border: '1px solid #1a1a1a' }}
         >
           <ProfileForm />
         </div>
@@ -27,7 +27,7 @@ const Home = () => {
           ) : (
             <ProfileList
               profiles={profiles}
-              title="Here's the current roster of friends..."
+              title="Search by your issue"
             />
           )}
         </div>
