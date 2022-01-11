@@ -27,7 +27,7 @@ const Home = () => {
           ) : (
             <ProfileList
               profiles={profiles}
-              title="Search by your issue"
+              title="Search for mechanics by your issue"
             />
           )}
         </div>

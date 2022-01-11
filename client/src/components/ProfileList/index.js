@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 // Import Link component for all internal application hyperlinks
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./ProfileList.css";
 
 const ProfileList = ({ profiles, title }) => {
@@ -11,6 +11,21 @@ const ProfileList = ({ profiles, title }) => {
   return (
     <div>
       <h3>{title}</h3>
+
+      <div className="searchForm input-group">
+        <div className="searchFormInput form-outline">
+          <input
+            type="search"
+            id="issueInput"
+            className="form-control"
+            placeholder="i.e. engine, transmission, body work, etc."
+          />
+          <button type="button" className="btn btn-primary">
+            Search
+          </button>
+        </div>
+      </div>
+
       <div className="flex-row justify-space-between my-4">
         {profiles &&
           profiles.map((profile) => (
@@ -18,17 +33,15 @@ const ProfileList = ({ profiles, title }) => {
               <div className="card-body">
                 <h4 className="card-title">
                   {profile.firstName} {profile.lastName} <br />
-                  <span>
-                    Location: {profile.location}
-                  </span>
+                  <span>Location: {profile.location}</span>
                 </h4>
 
                 {/* Use <Link> component to create an internal hyperlink reference. Use `to` prop to set the path instead of `href` */}
                 <Link
-                className="btn btn-primary"
+                  className="btn btn-primary"
                   to={`/profiles/${profile._id}`}
                 >
-                  See skill sets and specializations
+                  See mechanic profile
                 </Link>
               </div>
             </div>
@@ -36,37 +49,6 @@ const ProfileList = ({ profiles, title }) => {
       </div>
     </div>
   );
-
-  // return (
-  //   <div>
-  //     <h3 className="text-primary">{title}</h3>
-  //     <div className="flex-row justify-space-between my-4">
-  //       {profiles &&
-  //         profiles.map((profile) => (
-  //           <div key={profile._id} className="col-12 col-xl-6">
-  //             <div className="card mb-3">
-  //               <h4 className="card-header bg-dark text-light p-2 m-0">
-  //                 {profile.name} <br />
-  //                 <span className="text-white" style={{ fontSize: '1rem' }}>
-  //                   currently has {profile.skills ? profile.skills.length : 0}{' '}
-  //                   endorsed skill
-  //                   {profile.skills && profile.skills.length === 1 ? '' : 's'}
-  //                 </span>
-  //               </h4>
-
-  //               {/* Use <Link> component to create an internal hyperlink reference. Use `to` prop to set the path instead of `href` */}
-  //               <Link
-  //                 className="btn btn-block btn-squared btn-light text-dark"
-  //                 to={`/profiles/${profile._id}`}
-  //               >
-  //                 View and endorse their skills.
-  //               </Link>
-  //             </div>
-  //           </div>
-  //         ))}
-  //     </div>
-  //   </div>
-  // );
 };
 
 export default ProfileList;
