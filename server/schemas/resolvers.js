@@ -4,18 +4,29 @@ const { AuthenticationError } = require('apollo-server-express');
 
 
 const resolvers = {
+
   Query: {
-    profile: async (parent, args, context) => {
-      if (context.profile) {
-        const profile = await Profile.findById(context.profileId).populate({
-          // path: 'orders.products',
-          // populate: 'category'
-        });
-        return profile;
-      }
-        throw new AuthenticationError('Not logged in');
-      }
+    profiles: async () => {
+      return Profile.find();
     },
+
+    profile: async (parent, { profileId }) => {
+      return Profile.findOne({ _id: profileId });
+    },
+  },
+
+  // Query: {
+  //   profile: async (parent, args, context) => {
+  //     if (context.profile) {
+  //       const profile = await Profile.findById(context.profileId).populate({
+  //         // path: 'orders.products',
+  //         // populate: 'category'
+  //       });
+  //       return profile;
+  //     }
+  //       throw new AuthenticationError('Not logged in');
+  //     }
+  //   },
 
   //   profile: async (parent, { profileId }) => {
   //     return Profile.findOne({ _id: profileId });
@@ -80,60 +91,4 @@ const resolvers = {
   },
 };
 
-// const resolvers = {
-//   Query: {
-//     tech: async () => {
-//       return Tech.find({});
-//     },
-//     matchups: async (parent, { _id }) => {
-//       const params = _id ? { _id } : {};
-//       return Matchup.find(params);
-//     },
-//   },
-//   Mutation: {
-//     createMatchup: async (parent, args) => {
-//       const matchup = await Matchup.create(args);
-//       return matchup;
-//     },
-//     createVote: async (parent, { _id, techNum }) => {
-//       const vote = await Matchup.findOneAndUpdate(
-//         { _id },
-//         { $inc: { [`tech${techNum}_votes`]: 1 } },
-//         { new: true }
-//       );
-//       return vote;
-//     },
-//   },
-// };
-
 module.exports = resolvers;
-
-
-
-// const resolvers = {
-//   Query: {
-//     tech: async () => {
-//       return Tech.find({});
-//     },
-//     matchups: async (parent, { _id }) => {
-//       const params = _id ? { _id } : {};
-//       return Matchup.find(params);
-//     },
-//   },
-//   Mutation: {
-//     createMatchup: async (parent, args) => {
-//       const matchup = await Matchup.create(args);
-//       return matchup;
-//     },
-//     createVote: async (parent, { _id, techNum }) => {
-//       const vote = await Matchup.findOneAndUpdate(
-//         { _id },
-//         { $inc: { [`tech${techNum}_votes`]: 1 } },
-//         { new: true }
-//       );
-//       return vote;
-//     },
-//   },
-// };
-
-// module.exports = resolvers;
