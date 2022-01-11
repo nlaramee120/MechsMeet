@@ -1,20 +1,33 @@
 const { Profile} = require('../models');
+const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require('apollo-server-express');
 
 
 const resolvers = {
   Query: {
-    profiles: async () => {
-      return Profile.find();
+    profile: async (parent, args, context) => {
+      if (context.profile) {
+        const profile = await Profile.findById(context.profileId).populate({
+          // path: 'orders.products',
+          // populate: 'category'
+        });
+        return profile;
+      }
+        throw new AuthenticationError('Not logged in');
+      }
     },
 
-    profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
-    },
-  },
+  //   profile: async (parent, { profileId }) => {
+  //     return Profile.findOne({ _id: profileId });
+  //   },
+  // },
 
   Mutation: {
-    addProfile: async (parent, { name }) => {
-      return Profile.create({ name });
+    addProfile:  async (parent, args) => {
+      const profile = await Profile.create(args);
+      const token = signToken(profile);
+
+      return { token, profile };
     },
     addSkill: async (parent, { profileId, skill }) => {
       return Profile.findOneAndUpdate(
@@ -31,6 +44,13 @@ const resolvers = {
     removeProfile: async (parent, { profileId }) => {
       return Profile.findOneAndDelete({ _id: profileId });
     },
+    updateProfile: async (parent, args, context) => {
+      if (context.profile) {
+        return await Profile.findByIdAndUpdate(context.profileId, args, { new: true });
+      }
+
+      throw new AuthenticationError('Not logged in');
+    },
 
     removeSkill: async (parent, { profileId, skill }) => {
       return Profile.findOneAndUpdate(
@@ -38,6 +58,24 @@ const resolvers = {
         { $pull: { skills: skill } },
         { new: true }
       );
+    },
+
+    login: async (parent, { email, password }) => {
+      const profile = await Profile.findOne({ email });
+
+      if (!profile) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const correctPw = await profile.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const token = signToken(profile);
+
+      return { token, profile };
     },
   },
 };

@@ -1,30 +1,49 @@
 [
     {
-      "name": "Brian Kernighan",
+      "firstName" :"George",
+      "lastName": "Washington",
+      "email": "george@testmail.com",
+      "password": "password12345",
       "skills": ["Brake Service", "Suspension", "General Checkup"]
     },
     {
-      "name": "Max Kanat-Alexander",
+      "firstName" :"Alan",
+      "lastName": "Smith",
+      "email": "alan@testmail.com",
+      "password": "password12345",
       "skills": ["Headlights", "Brake", "General Checkup"]
     },
     {
-      "name": "Amiko",
+      "firstName" :"Amiko",
+      "lastName": "Smith",
+      "email": "amiko@testmail.com",
+      "password": "password12345",
       "skills": ["General Checkup"]
     },
     {
-      "name": "Kent Beck",
+      "firstName" :"John",
+      "lastName": "Smith",
+      "email": "john@testmail.com",
+      "password": "password12345",
       "skills": [
         "Oil Change",
         "Paint Job"]
     },
     {
-      "name": "Edward V. Berard",
+      "firstName" :"Testy",
+      "lastName": "Smith",
+      "email": "testy@testmail.com",
+      "password": "password12345",
       "skills": ["Emissions Test"]
     },
     {
-      "name": "Alan Kay",
+      "firstName" :"Ed",
+      "lastName": "Smith",
+      "email": "ed@testmail.com",
+      "password": "password12345",
       "skills": [
-        "Oil Change"
+        "Oil Change",
+        "Tire Rotation"
       ]
     }
   ]
