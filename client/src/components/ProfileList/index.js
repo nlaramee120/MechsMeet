@@ -17,9 +17,9 @@ const ProfileList = ({ profiles, title }) => {
             <div className="card col-12 col-xl-6" key={profile._id}>
               <div className="card-body">
                 <h4 className="card-title">
-                  {profile.name} <br />
+                  {profile.firstName} {profile.lastName} <br />
                   <span>
-                    Location: 
+                    Location: {profile.location}
                   </span>
                 </h4>
 
