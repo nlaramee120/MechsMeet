@@ -1,0 +1,18 @@
+* {
+    text-align: center;
+}
+
+#issueInput {
+    width: 60%;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.searchForm {
+    display: flex;
+    flex-direction: row;
+}
+
+.searchFormInput {
+    width: 100%;
+}
