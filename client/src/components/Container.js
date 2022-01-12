@@ -3,9 +3,9 @@ import { loadStripe } from "@stripe/stripe-js"
 import React from "react"
 import PaymentForm from "./PaymentForm"
 
-const PUBLIC_KEY = "pk_test_rgWMA3zxjAtwaB6iV8b5W40x"
+const publicKey = process.env.PUBLIC_KEY
 
-const stripeTestPromise = loadStripe(PUBLIC_KEY)
+const stripeTestPromise = loadStripe(publicKey)
 
 export default function StripeContainer() {
 	return (
