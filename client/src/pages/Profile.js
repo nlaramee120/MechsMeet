@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Import the `useParams()` hook
 import { useParams } from "react-router-dom";
@@ -26,9 +27,18 @@ const Profile = () => {
   return (
     <div>
       <p class="payText">Have services been completed?</p>
-      <button type="button" class="payMech btn btn-info">
-        Pay {profile.firstName} {profile.lastName}
-      </button>
+
+      <Link to="/pay">
+        <button
+          type="button"
+          class="payMech btn btn-info"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Pay {profile.firstName} {profile.lastName}
+        </button>
+      </Link>
+
       <h2>
         About {profile.firstName} {profile.lastName}:
       </h2>
