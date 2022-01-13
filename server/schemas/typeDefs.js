@@ -6,6 +6,8 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
+    about: String
+    location: String
     skills: [String]!
   }
 
@@ -17,6 +19,7 @@ const typeDefs = gql`
   type Query {
     profiles: [Profile]!
     profile(profileId: ID!): Profile
+  
   }
 
   type Mutation {
@@ -30,3 +33,5 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
+
+// about:String!,location:String!
