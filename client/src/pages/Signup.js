@@ -17,6 +17,8 @@ function Signup(props) {
         password: formState.password,
         firstName: formState.firstName,
         lastName: formState.lastName,
+        // location: formState.location,
+        // about: formState.about,
       },
     });
     const token = mutationResponse.data.addProfile.token;
@@ -77,6 +79,26 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
+        {/* <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">Location:</label>
+          <input className="inputField"
+            placeholder="City"
+            name="location"
+            type="location"
+            id="location"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">About:</label>
+          <input className="inputField"
+            placeholder="Tell us about yourself"
+            name="about"
+            type="about"
+            id="about"
+            onChange={handleChange}
+          />
+        </div> */}
         <div className="flex-row flex-end">
           <button className="formBtn m-1 text-dark" style={{ fontSize: "1rem" }} type="submit">Submit</button>
         </div>

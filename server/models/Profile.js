@@ -27,12 +27,12 @@ const profileSchema = new Schema({
   },
   about: {
     type: String,
-    required: true,
+    required: false,
     trim: true
   },
   location: {
     type: String,
-    required: true,
+    required: false,
     trim: true
   },
   skills: [

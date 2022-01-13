@@ -2,6 +2,7 @@ import React from "react";
 // Import React Router Link component for internal hyperlinks
 import { Link } from "react-router-dom";
 import "./Header.css";
+import Auth from "../../utils/auth";
 
 const Header = () => {
   return (
@@ -24,7 +25,7 @@ const Header = () => {
               Login/Sign-Up
             </h1>
           </Link>
-          <Link className="logout text-dark" to="/login">
+          <Link onClick={() => Auth.logout()} className="logout text-dark" to="/pay">
             <h1
               className="m-1"
               style={{ fontSize: "1rem", textAlign: "right" }}
