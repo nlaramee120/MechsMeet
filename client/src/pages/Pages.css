@@ -1,7 +1,35 @@
+/* Profile.js styles */
+
 .payText {
     font-size: 15px;
 }
 .payMech {
     font-size: 20px;
     margin: -15px 0 20px 0;
+}
+
+/* Signup.js and Login.js styles */
+
+h2 {
+    margin-top: 10px;
+}
+
+.formCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0 50px 0;
+}
+
+.inputField {
+    width: 300px;
+    margin-left: 10px;
+}
+
+.formBtn {
+    width: 110px;
+    height: 35px;
+    background-color: lightslategray;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
 }
