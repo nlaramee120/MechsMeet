@@ -54,7 +54,7 @@ THEN
 -> Email: james.capadocia@gmail.com<br><br>
 - Nick Laramee<br>
 -> GitHub Profile: <a href="https://github.com/nlaramee120">nlaramee120</a><br>
--> Email: james.capadocia@gmail.com<br><br>
+-> Email: nlaramee120@aol.com<br><br>
 - Edgar Ortega<br>
 -> GitHub Profile: <a href="https://github.com/EdgarO93">EdgarO93</a><br>
 -> Email: edort93@gmail.com<br><br>
