@@ -23,6 +23,7 @@
     "@stripe/react-stripe-js": "^1.7.0",
     "@stripe/stripe-js": "^1.22.0",
     "axios": "^0.24.0",
+    "dotenv": "^11.0.0",
     "stripe": "^8.195.0"
   }
 }

@@ -13,6 +13,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import StripeButton from "./components/Stripe/script.js"
+import Success from './components/Stripe/Success'
+import Cancel from './components/Stripe/Cancel'
 
 // const client = new ApolloClient({
 //   uri: "/graphql",
@@ -39,17 +42,15 @@ const client = new ApolloClient({
 });
 
 // function App() {
-//   const [showItem, setShowItem] = useState(false)
 //   return (
 //     <ApolloProvider client={client}>
 //       <Router>
 //         <div>
-//           <Switch>
 //             <Route>
-//               {showItem ? <StripeContainer/> : <><h3>$10</h3><button onClick={() => setShowItem(true)}>Purchase</button></>}
-//               <Home />
-//             </Route>
-//           </Switch>
+//               <StripeButton />
+//               <Route exact path="/success" component={Success} />
+//               <Route exact path="/cancel" component={Cancel} />
+//            </Route>
 //         </div>
 //       </Router>
 //     </ApolloProvider>
