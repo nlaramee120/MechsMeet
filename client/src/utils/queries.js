@@ -6,6 +6,9 @@ export const QUERY_PROFILES = gql`
       _id
       firstName
       lastName
+      email
+      about
+      location
       skills
     }
   }
@@ -17,6 +20,23 @@ export const QUERY_SINGLE_PROFILE = gql`
       _id
       firstName
       lastName
+      email
+      about
+      location
+      skills
+    }
+  }
+`;
+
+export const QUERY_PROFILE = gql`
+{
+    profile{
+      _id
+      firstName
+      lastName
+      email
+      about
+      location
       skills
     }
   }
