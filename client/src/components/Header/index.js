@@ -5,9 +5,8 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <header className="bg-primary text-dark mb-4 py-3 display-flex align-center">
+    <header className="bg-primary text-dark mb-4 display-flex align-center">
       <div className="container flex-column justify-space-between-lg justify-center ">
-        {/* Use Link component to create a link that returns to the homepage on click */}
         <div className="headerLinks">
           <Link className="myProfile text-dark" to="/me">
             <h1
@@ -23,6 +22,14 @@ const Header = () => {
               style={{ fontSize: "1rem", textAlign: "right" }}
             >
               Login/Sign-Up
+            </h1>
+          </Link>
+          <Link className="logout text-dark" to="/login">
+            <h1
+              className="m-1"
+              style={{ fontSize: "1rem", textAlign: "right" }}
+            >
+              Logout
             </h1>
           </Link>
         </div>
