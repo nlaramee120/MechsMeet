@@ -13,6 +13,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Myprofile from './pages/myProfile';
+import Modal from './components/Modal';
 
 // const client = new ApolloClient({
 //   uri: "/graphql",
@@ -67,9 +69,11 @@ function App() {
             {/* Define routes to render different page components at different paths */}
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
-              <Route exact path="/signup" component={Signup} />
+            <Route exact path="/signup" component={Signup} />
             {/* Define a route that will take in variable data */}
             <Route exact path="/profiles/:profileId" component={Profile} />
+            <Route exact path="/me" component={Myprofile} />
+            <Route exact path="/pay" component={Modal} />
           </div>
           <Footer />
         </div>

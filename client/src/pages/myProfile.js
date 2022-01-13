@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 // Import the `useParams()` hook
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
 import SkillsList from "../components/SkillsList";
+import SkillForm from "../components/SkillForm";
 import "./Pages.css";
 
 import { QUERY_SINGLE_PROFILE } from "../utils/queries";
 
-const Profile = () => {
+const Myprofile = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { profileId } = useParams();
 
@@ -26,23 +26,10 @@ const Profile = () => {
   }
   return (
     <div>
-      <p class="payText">Have services been completed?</p>
-
-      <Link to="/pay">
-        <button
-          type="button"
-          class="payMech btn btn-info"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Pay {profile.firstName} {profile.lastName}
-        </button>
-      </Link>
-
       <h2>
-        About {profile.firstName} {profile.lastName}:
+        About Me {profile.firstName} {profile.lastName}:
       </h2>
-      <p>
+      <p contenteditable="true">
         {profile.about} "Lorem ipsum dolor sit amet, consectetur adipiscing
         elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -51,15 +38,19 @@ const Profile = () => {
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
         qui officia deserunt mollit anim id est laborum."
       </p>
-      <h2>Location:</h2>
-      <p>{profile.location} Chicago</p>
-      <h2>Contact</h2>
-      <p>{profile.email} test@gmail.com</p>
-      <h2 className="card-header">Specializations and Skill Sets</h2>
+      <h2>My Location:</h2>
+      <p contenteditable="true">{profile.location} Chicago</p>
+      <h2>My Contact Info</h2>
+      <p contenteditable="true">{profile.email} test@gmail.com</p>
+      <h2 className="card-header">My Specializations and Skill Sets</h2>
 
       {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
+
+      <div className="my-4 p-4" style={{ border: "1px solid #1a1a1a", borderRadius: "5px", backgroundColor: "lightslategray" }}>
+        <SkillForm profileId={profile._id} />
+      </div>
     </div>
   );
 };
 
-export default Profile;
+export default Myprofile;
