@@ -72,7 +72,7 @@ function App() {
             <Route exact path="/signup" component={Signup} />
             {/* Define a route that will take in variable data */}
             <Route exact path="/profiles/:profileId" component={Profile} />
-            <Route exact path="/me" component={Myprofile} />
+            <Route exact path="/me/:profileId" component={Myprofile} />
             <Route exact path="/pay" component={Modal} />
           </div>
           <Footer />
