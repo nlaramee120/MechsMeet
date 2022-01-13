@@ -5,13 +5,15 @@
 }
 
 .myProfile,
-.login {
+.login,
+.logout {
     width: 130px;
     background-color: lightslategray;
     border: 1px solid lightslategray;
     border-radius: 5px;
 }
 
-.myProfile {
+.myProfile,
+.login {
     margin-bottom: 5px;
 }
