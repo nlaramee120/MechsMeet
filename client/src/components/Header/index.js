@@ -9,7 +9,7 @@ const Header = () => {
     <header className="bg-primary text-dark mb-4 display-flex align-center">
       <div className="container flex-column justify-space-between-lg justify-center ">
         <div className="headerLinks">
-          <Link className="myProfile text-dark" to="/me">
+          <Link className="myProfile text-dark" to="/me/:profileId">
             <h1
               className="m-1"
               style={{ fontSize: "1rem", textAlign: "right" }}
