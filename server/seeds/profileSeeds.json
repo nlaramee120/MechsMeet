@@ -4,6 +4,8 @@
       "lastName": "Washington",
       "email": "george@testmail.com",
       "password": "password12345",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fusce ut placerat orci nulla pellentesque dignissim. Habitant morbi tristique senectus et netus et. ",
+      "location": "Chicago",
       "skills": ["Brake Service", "Suspension", "General Checkup"]
     },
     {
@@ -11,6 +13,8 @@
       "lastName": "Smith",
       "email": "alan@testmail.com",
       "password": "password12345",
+      "about": "Urna nunc id cursus metus aliquam eleifend mi. Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. Pellentesque habitant morbi tristique senectus et netus et malesuada. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. ",
+      "location": "Chicago",
       "skills": ["Headlights", "Brake", "General Checkup"]
     },
     {
@@ -18,12 +22,16 @@
       "lastName": "Smith",
       "email": "amiko@testmail.com",
       "password": "password12345",
+      "about": "Et tortor at risus viverra adipiscing at in tellus integer. Fames ac turpis egestas sed tempus. Eleifend quam adipiscing vitae proin sagittis.",
+      "location": "Berwyn",
       "skills": ["General Checkup"]
     },
     {
       "firstName" :"John",
       "lastName": "Smith",
       "email": "john@testmail.com",
+      "about": "Amet dipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa eget egestas purus viverra accumsan in nisl. Posuere morbi leo urna molestie at.",
+      "location": "Cicero",
       "password": "password12345",
       "skills": [
         "Oil Change",
@@ -34,6 +42,8 @@
       "lastName": "Smith",
       "email": "testy@testmail.com",
       "password": "password12345",
+      "about": "I can help with your emissions",
+      "location": "Skokie",
       "skills": ["Emissions Test"]
     },
     {
@@ -41,6 +51,8 @@
       "lastName": "Smith",
       "email": "ed@testmail.com",
       "password": "password12345",
+      "about": "I like cars.",
+      "location": "Chicago",
       "skills": [
         "Oil Change",
         "Tire Rotation"
