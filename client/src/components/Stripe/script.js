@@ -1,4 +1,6 @@
-function checkoutForm() {
+import React from 'react';
+
+const StripeButton = () => {
   fetch("/create-checkout-session", {
     method: "POST",
     headers: {
@@ -21,12 +23,6 @@ function checkoutForm() {
     .catch(e => {
       console.error(e.error)
     })
-}
-
-const StripeButton = () => {
-    return (
-        <button onClick={checkoutForm}>Checkout</button>
-    )
 }
 
 export default StripeButton;

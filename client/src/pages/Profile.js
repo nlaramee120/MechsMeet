@@ -10,6 +10,8 @@ import "./Pages.css";
 
 import { QUERY_SINGLE_PROFILE } from "../utils/queries";
 
+import StripeButton from '../components/Stripe/script'
+
 const Profile = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { profileId } = useParams();
@@ -28,8 +30,8 @@ const Profile = () => {
     <div>
       <p class="payText">Have services been completed?</p>
 
-      <Link to="/pay">
         <button
+          onClick={StripeButton}
           type="button"
           class="payMech btn btn-info"
           data-bs-toggle="modal"
@@ -37,7 +39,6 @@ const Profile = () => {
         >
           Pay {profile.firstName} {profile.lastName}
         </button>
-      </Link>
 
       <h2>
         About {profile.firstName} {profile.lastName}:
