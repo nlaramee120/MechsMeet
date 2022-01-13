@@ -38,9 +38,9 @@ class AuthService {
     // Clear user token and profile data from localStorage
     localStorage.removeItem('id_token');
     console.log("You are logged out!")
-    debugger
+    // debugger
     // this will reload the page and reset the state of the application
-    window.location.assign('/');
+    window.location.assign('/login');
   }
 }
 

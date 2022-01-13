@@ -25,7 +25,7 @@ const Header = () => {
               Login/Sign-Up
             </h1>
           </Link>
-          <Link onClick={() => Auth.logout()} className="logout text-dark" to="/pay">
+          <Link onClick={() => Auth.logout()} className="logout text-dark">
             <h1
               className="m-1"
               style={{ fontSize: "1rem", textAlign: "right" }}
