@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import Auth from '../utils/auth';
-import { ADD_PROFILE } from '../utils/mutations';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import Auth from "../utils/auth";
+import { ADD_PROFILE } from "../utils/mutations";
+import "./Pages.css"
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [addProfile] = useMutation(ADD_PROFILE);
 
   const handleFormSubmit = async (event) => {
@@ -35,10 +36,10 @@ function Signup(props) {
       <Link to="/login">← Go to Login</Link>
 
       <h2>Signup</h2>
-      <form onSubmit={handleFormSubmit}>
+      <form className="formCont" onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
-          <label htmlFor="firstName">First Name:</label>
-          <input
+          <label htmlFor="firstName">First Name: </label>
+          <input className="inputField"
             placeholder="First"
             name="firstName"
             type="firstName"
@@ -48,7 +49,7 @@ function Signup(props) {
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="lastName">Last Name:</label>
-          <input
+          <input className="inputField"
             placeholder="Last"
             name="lastName"
             type="lastName"
@@ -58,8 +59,8 @@ function Signup(props) {
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="email">Email:</label>
-          <input
-            placeholder="youremail@test.com"
+          <input className="inputField"
+            placeholder="email@email.com"
             name="email"
             type="email"
             id="email"
@@ -68,8 +69,8 @@ function Signup(props) {
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
+          <input className="inputField"
+            placeholder="********"
             name="password"
             type="password"
             id="pwd"
@@ -77,7 +78,7 @@ function Signup(props) {
           />
         </div>
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <button className="formBtn m-1 text-dark" style={{ fontSize: "1rem" }} type="submit">Submit</button>
         </div>
       </form>
     </div>
