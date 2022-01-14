@@ -12,7 +12,7 @@ export default function CarouselComponent() {
   const profiles = data?.profiles || [];
 
   return (
-    <div>
+    <div className="profileListCont">
       <h3>Search for a mechanic by issue...</h3>
 
       <div className="searchForm input-group">

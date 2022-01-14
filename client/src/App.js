@@ -17,7 +17,6 @@ import StripeButton from "./components/Stripe/script.js"
 import Success from './components/Stripe/Success'
 import Cancel from './components/Stripe/Cancel'
 import Myprofile from './pages/myProfile';
-import Modal from './components/Modal';
 
 // const client = new ApolloClient({
 //   uri: "/graphql",
@@ -76,7 +75,6 @@ function App() {
             <Route exact path="/me/:profileId" component={Myprofile} />
             <Route exact path="/success" component={Success} />
             <Route exact path="/cancel" component={Cancel} />
-            <Route exact path="/pay" component={Modal} />
           </div>
           <Footer />
         </div>

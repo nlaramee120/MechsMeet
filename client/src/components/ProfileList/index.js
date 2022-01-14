@@ -9,7 +9,7 @@ const ProfileList = ({ profiles, title }) => {
   }
 
   return (
-    <div>
+    <div className="profileListCont">
       <h3>{title}</h3>
 
       <div className="searchForm input-group">

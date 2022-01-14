@@ -12,6 +12,12 @@
     margin-top: -15px
 }
 
+.profileListCont {
+    padding: 20px 0 0 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
 /* myProfile.js */
 
 .mechInfo,
