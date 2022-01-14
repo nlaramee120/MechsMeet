@@ -22,7 +22,7 @@ const Header = () => {
               className="m-1"
               style={{ fontSize: "1rem", textAlign: "right" }}
             >
-              Login/Sign-Up
+              Login
             </h1>
           </Link>
           <Link onClick={() => Auth.logout()} className="logout text-dark">
@@ -43,7 +43,7 @@ const Header = () => {
           Find local mechanics to help with your issue
         </p>
       </div>
-    </header>
+    </header> 
   );
 };
 
