@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 
 const Success = () => {
 
-    const [count, setCount] = useState(5);
+    const [count, setCount] = useState(3);
 
   useEffect(() => {
     setInterval(() => {
