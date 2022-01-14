@@ -40,17 +40,17 @@ const Profile = () => {
           Pay {profile.firstName} {profile.lastName}
         </button>
 
-      <h2>
+      <h3>
         About {profile.firstName} {profile.lastName}:
-      </h2>
+      </h3>
       <p>
         {profile.about} 
       </p>
-      <h2>Location:</h2>
+      <h3>Location:</h3>
       <p>{profile.location}</p>
-      <h2>Contact</h2>
+      <h3>Contact</h3>
       <p>{profile.email}</p>
-      <h2 className="card-header">Specializations and Skill Sets</h2>
+      <h3 className="card-header">Specializations and Skill Sets</h3>
 
       {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
     </div>

@@ -45,17 +45,17 @@ const Myprofile = () => {
 
   return (
     <div>
-      <h2>
+      <h3>
         About Me: {profile.firstName} {profile.lastName}:
-      </h2>
+      </h3>
       <p contenteditable="true">
         {profile.about} 
       </p>
-      <h2>My Location:</h2>
+      <h3>My Location:</h3>
       <p contenteditable="true">{profile.location}</p>
-      <h2>My Contact Info</h2>
+      <h3>My Contact Info</h3>
       <p contenteditable="true">{profile.email} </p>
-      <h2 className="card-header">My Specializations and Skill Sets</h2>
+      <h3 className="card-header">My Specializations and Skill Sets</h3>
 
       {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
 
