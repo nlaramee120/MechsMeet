@@ -1,15 +1,20 @@
 /* Profile.js styles */
 
+.payMechCont {
+    margin-top: 15px;
+}
+
 .payText {
     font-size: 15px;
 }
 .payMech {
     font-size: 20px;
-    margin: -15px 0 20px 0;
+    margin-top: -15px
 }
 
 /* myProfile.js */
 
+.mechInfo,
 .myInfo {
     display: flex;
     flex-direction: column;
