@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 
 import ProfileList from '../components/ProfileList';
 import ProfileForm from '../components/ProfileForm';
+import Carousel from '../components/Carousel';
 
 import { QUERY_PROFILES } from '../utils/queries';
 
@@ -25,7 +26,8 @@ const Home = () => {
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <ProfileList
+            <Carousel
+            // or ProfileList
               profiles={profiles}
               title="Search for mechanics by your issue"
             />
