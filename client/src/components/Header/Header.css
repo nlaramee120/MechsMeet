@@ -23,7 +23,7 @@ header {
     width: 130px;
     border: 1px solid lightslategray;
     border-radius: 3rem;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .logout:hover,

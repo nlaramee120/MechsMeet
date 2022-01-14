@@ -31,14 +31,12 @@ const ProfileList = ({ profiles, title }) => {
           profiles.map((profile) => (
             <div className="card col-12 col-xl-6" key={profile._id}>
               <div className="card-body">
-                <h4 className="card-title">
+                <h3 className="card-title">
                   {profile.firstName} {profile.lastName} <br />
-                  <span>Location: {profile.location}</span>
-                </h4>
-
-                {/* Use <Link> component to create an internal hyperlink reference. Use `to` prop to set the path instead of `href` */}
+                  <span className="mechLoc">Location: {profile.location}</span>
+                </h3>
                 <Link
-                  className="btn btn-primary"
+                  className="seeProfileBtn btn btn-primary"
                   to={`/profiles/${profile._id}`}
                 >
                   See mechanic profile
