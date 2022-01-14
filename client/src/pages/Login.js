@@ -32,11 +32,12 @@ function Login(props) {
 
   return (
     <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
+      {/* <Link to="/signup">← Go to Signup</Link> */}
 
-      <h2>Login</h2>
+      <h1>Log In</h1>
+      <h2>Don't have an account? <Link to="/signup">Sign Up</Link></h2>
       <form className="formCont" onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
+        <div className="formItem flex-row space-between my-2">
           <label htmlFor="email">Email address:</label>
           <input className="inputField"
             placeholder="email@email.com"
@@ -46,7 +47,7 @@ function Login(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
+        <div className="formItem flex-row space-between my-2">
           <label htmlFor="pwd">Password:</label>
           <input className="inputField"
             placeholder="********"
@@ -62,7 +63,7 @@ function Login(props) {
           </div>
         ) : null}
         <div className="flex-row flex-end">
-          <button className="formBtn m-1 text-dark" style={{ fontSize: "1rem" }} type="submit">Submit</button>
+          <button className="formBtn m-1 text-dark" style={{ fontSize: "1rem" }} type="submit">Log In</button>
         </div>
       </form>
     </div>

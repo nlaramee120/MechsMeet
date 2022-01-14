@@ -35,11 +35,12 @@ function Signup(props) {
 
   return (
     <div className="container my-1">
-      <Link to="/login">← Go to Login</Link>
+      {/* <Link to="/login">← Go to Login</Link> */}
 
-      <h2>Signup</h2>
+      <h1>Sign Up</h1>
+      <h2>Already have an account? <Link to="/login">Log In</Link></h2>
       <form className="formCont" onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
+        <div className="formItem flex-row space-between my-2">
           <label htmlFor="firstName">First Name: </label>
           <input className="inputField"
             placeholder="First"
@@ -49,7 +50,7 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
+        <div className="formItem flex-row space-between my-2">
           <label htmlFor="lastName">Last Name:</label>
           <input className="inputField"
             placeholder="Last"
@@ -59,7 +60,7 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
+        <div className="formItem flex-row space-between my-2">
           <label htmlFor="email">Email:</label>
           <input className="inputField"
             placeholder="email@email.com"
@@ -69,7 +70,7 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
+        <div className="formItem flex-row space-between my-2">
           <label htmlFor="pwd">Password:</label>
           <input className="inputField"
             placeholder="********"
@@ -100,7 +101,7 @@ function Signup(props) {
           />
         </div> */}
         <div className="flex-row flex-end">
-          <button className="formBtn m-1 text-dark" style={{ fontSize: "1rem" }} type="submit">Submit</button>
+          <button className="formBtn m-1 text-dark" style={{ fontSize: "1rem" }} type="submit">Sign Up</button>
         </div>
       </form>
     </div>

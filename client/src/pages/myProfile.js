@@ -7,8 +7,7 @@ import { useQuery } from "@apollo/client";
 import SkillsList from "../components/SkillsList";
 import SkillForm from "../components/SkillForm";
 import "./Pages.css";
-import Auth from '../utils/auth';
-
+import Auth from "../utils/auth";
 
 import { QUERY_ME } from "../utils/queries";
 
@@ -16,20 +15,16 @@ const Myprofile = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { profileId } = useParams();
 
-  const { loading, data } = useQuery(
-    QUERY_ME,
-    {
-      variables: { profileId: profileId },
-    }
-  );
+  const { loading, data } = useQuery(QUERY_ME, {
+    variables: { profileId: profileId },
+  });
 
   // const profile = data?.profile || {};
   const profile = data?.me || data?.profile || {};
-  console.log(data?.me || data?.profile)
+  console.log(data?.me || data?.profile);
   // redirect to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data._id === profileId)
     return <Redirect to="/me:/profileId" />;
-
 
   if (loading) {
     return <div>Loading...</div>;
@@ -45,22 +40,34 @@ const Myprofile = () => {
 
   return (
     <div>
-      <h2>
-        About Me: {profile.firstName} {profile.lastName}:
-      </h2>
-      <p contenteditable="true">
-        {profile.about} 
-      </p>
-      <h2>My Location:</h2>
-      <p contenteditable="true">{profile.location}</p>
-      <h2>My Contact Info</h2>
-      <p contenteditable="true">{profile.email} </p>
-      <h2 className="card-header">My Specializations and Skill Sets</h2>
+      <h1>My Profile</h1>
+      <div className="myInfo">
+        <h3>About:</h3>
+        <p className="editInfo" contenteditable="true">
+          {profile.about}
+        </p>
+        <h3>Location:</h3>
+        <p className="editInfo" contenteditable="true">
+          {profile.location}
+        </p>
+        <h3>Contact Info:</h3>
+        <p className="editInfo" contenteditable="true">
+          {profile.email}{" "}
+        </p>
+        <h3 className="card-header">Specializations and Skill Sets:</h3>
 
-      {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
+        {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
 
-      <div className="my-4 p-4" style={{ border: "1px solid #1a1a1a", borderRadius: "5px", backgroundColor: "lightslategray" }}>
-        <SkillForm profileId={profile._id} />
+        <div
+          className="addSkill my-4 p-4"
+          style={{
+            border: "1px solid #1a1a1a",
+            borderRadius: "5px",
+            backgroundColor: "lightslategray",
+          }}
+        >
+          <SkillForm profileId={profile._id} />
+        </div>
       </div>
     </div>
   );

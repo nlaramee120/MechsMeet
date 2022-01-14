@@ -1,19 +1,33 @@
-.headerLinks {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+header {
+    background-color: white !important;
 }
 
-.myProfile,
-.login,
-.logout {
-    width: 130px;
-    background-color: lightslategray;
-    border: 1px solid lightslategray;
-    border-radius: 5px;
+.headerLinks {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.navLinks {
+    display: flex;
 }
 
 .myProfile,
 .login {
-    margin-bottom: 5px;
+    margin-right: 5px;
 }
+
+.login,
+.logout {
+    color: lightslategray !important;
+    width: 130px;
+    border: 1px solid lightslategray;
+    border-radius: 3rem;
+    transition: 0.3s;
+}
+
+.logout:hover,
+.login:hover {
+    background-color: lightslategray;
+    color: white !important;
+  }
