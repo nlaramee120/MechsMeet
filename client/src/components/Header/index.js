@@ -9,7 +9,7 @@ const Header = () => {
     <header className="bg-primary text-dark mb-4 display-flex align-center">
       <div className="container flex-column justify-space-between-lg justify-center ">
         <div className="headerLinks">
-          <Link className="myProfile text-dark" to="/me">
+          <Link className="myProfile text-dark" to="/me/:profileId">
             <h1
               className="m-1"
               style={{ fontSize: "1rem", textAlign: "right" }}
@@ -22,10 +22,10 @@ const Header = () => {
               className="m-1"
               style={{ fontSize: "1rem", textAlign: "right" }}
             >
-              Login/Sign-Up
+              Login
             </h1>
           </Link>
-          <Link onClick={() => Auth.logout()} className="logout text-dark" to="/pay">
+          <Link onClick={() => Auth.logout()} className="logout text-dark">
             <h1
               className="m-1"
               style={{ fontSize: "1rem", textAlign: "right" }}
@@ -43,7 +43,7 @@ const Header = () => {
           Find local mechanics to help with your issue
         </p>
       </div>
-    </header>
+    </header> 
   );
 };
 
