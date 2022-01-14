@@ -43,7 +43,7 @@ const Header = () => {
           Find local mechanics to help with your issue
         </p>
       </div>
-    </header>
+    </header> 
   );
 };
 
