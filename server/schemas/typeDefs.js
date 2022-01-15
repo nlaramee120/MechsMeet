@@ -29,6 +29,7 @@ const typeDefs = gql`
     removeProfile(profileId: ID!): Profile
     removeSkill(profileId: ID!, skill: String!): Profile
     updateProfile(firstName: String, lastName: String, email: String, password: String): Profile
+    updateMyProfile(profileId: ID!, about: String!):Profile
     login(email: String!, password: String!): Auth
   }
 `;

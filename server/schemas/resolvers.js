@@ -69,6 +69,19 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
 
+    updateMyProfile: async (parent,{ profileId, about}) => {
+      return Profile.findOneAndUpdate(
+        { _id: profileId },
+        {
+          $addToSet: { about: about },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
+
     removeSkill: async (parent, { profileId, skill }) => {
       return Profile.findOneAndUpdate(
         { _id: profileId },
