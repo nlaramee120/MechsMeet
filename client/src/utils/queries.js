@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_PROFILES = gql`
   query allProfiles {
@@ -10,6 +10,7 @@ export const QUERY_PROFILES = gql`
       about
       location
       skills
+      img
     }
   }
 `;
@@ -38,6 +39,7 @@ export const QUERY_ME = gql`
       about
       location
       skills
+      img
     }
   }
 `;
@@ -49,7 +51,8 @@ export const QUERY_SERVICES = gql`
       priceInCents
       quantity
     }
-  }`;
+  }
+`;
 
 export const QUERY_SINGLE_SERVICE = gql`
   query singleService {
@@ -59,4 +62,5 @@ export const QUERY_SINGLE_SERVICE = gql`
       priceInCents
       quantity
     }
-  }`;
+  }
+`;

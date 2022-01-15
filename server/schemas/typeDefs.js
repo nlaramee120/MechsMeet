@@ -9,6 +9,7 @@ const typeDefs = gql`
     about: String
     location: String
     skills: [String]!
+    img: String
   }
 
   type Service {
