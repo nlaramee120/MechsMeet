@@ -1,5 +1,5 @@
-import React,{ useState}  from "react";
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Import the `useParams()` hook
 import { Redirect, useParams } from "react-router-dom";
@@ -10,28 +10,26 @@ import SkillForm from "../components/SkillForm";
 import "./Pages.css";
 import Auth from "../utils/auth";
 
-import { QUERY_ME} from "../utils/queries";
-import { UPDATE_MYP} from "../utils/mutations";
+import { QUERY_ME } from "../utils/queries";
+import { UPDATE_MYP } from "../utils/mutations";
 
 const Myprofile = () => {
-  const [about, setabout] = useState('');
-  const [ updateMyProfile, { error }] = useMutation(UPDATE_MYP);
- const handleFormSubmit=  async (event) => {
-  
+  const [about, setabout] = useState("");
+  const [updateMyProfile, { error }] = useMutation(UPDATE_MYP);
+  const handleFormSubmit = async (event) => {
     try {
-      console.log(profileId)
+      console.log(profileId);
       debugger;
       // its not pulling the profileId
-      const data = await  updateMyProfile({
+      const data = await updateMyProfile({
         variables: { profileId, about },
       });
 
-      setabout('');
-     
+      setabout("");
     } catch (err) {
       console.error(err);
     }
-  }
+  };
 
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { profileId } = useParams();
@@ -40,17 +38,17 @@ const Myprofile = () => {
     variables: { profileId: profileId },
   });
 
-
   // const profile = data?.profile || {};
   const profile = data?.me || data?.profile || {};
   console.log(data?.me || data?.profile);
-   //if not logged in
-   if (!data?.me || data?.profile) {
+  //if not logged in
+  if (!data?.me || data?.profile) {
     return (
       <h4>
-        You need to be logged in to see your profile page. 
-        <br/>
-        <Link to="/login">Login Here!</Link> or <Link to="/signup">Signup Here!.</Link>
+        You need to be logged in to see your profile page.
+        <br />
+        <Link to="/login">Login Here!</Link> or{" "}
+        <Link to="/signup">Signup Here!.</Link>
       </h4>
     );
   }
@@ -70,13 +68,14 @@ const Myprofile = () => {
   //   );
   // }
 
-  
   return (
     <div>
       <h1>My Profile</h1>
       <div className="myInfo">
         <h3>About:</h3>
-     
+
+        <img src={`/images/${profile.img}`} alt="text" />
+
         <form
           className="flex-row justify-center justify-space-between-md align-center"
           onSubmit={handleFormSubmit}
@@ -95,14 +94,21 @@ const Myprofile = () => {
             </button>
           </div>
         </form>
-      
-  
+
         <h3>Location:</h3>
-        <p className="editInfo" contentEditable="true" suppressContentEditableWarning={true}>
+        <p
+          className="editInfo"
+          contentEditable="true"
+          suppressContentEditableWarning={true}
+        >
           {profile.location}
         </p>
         <h3>Contact Info:</h3>
-        <p className="editInfo" contentEditable="true" suppressContentEditableWarning={true}>
+        <p
+          className="editInfo"
+          contentEditable="true"
+          suppressContentEditableWarning={true}
+        >
           {profile.email}{" "}
         </p>
         <h3 className="card-header">Specializations and Skill Sets:</h3>
@@ -120,7 +126,6 @@ const Myprofile = () => {
           <SkillForm profileId={profile._id} />
         </div>
       </div>
-    
     </div>
   );
 };

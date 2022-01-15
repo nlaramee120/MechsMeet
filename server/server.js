@@ -66,7 +66,7 @@ app.post("/create-checkout-session", async (req, res) => {
 })
 
 // Serve up static assets could be useful later
-// app.use('/images', express.static(path.join(__dirname, '../client/images')));
+app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {

@@ -6,7 +6,8 @@
       "password": "password12345",
       "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fusce ut placerat orci nulla pellentesque dignissim. Habitant morbi tristique senectus et netus et. ",
       "location": "Chicago",
-      "skills": ["Brake Service", "Suspension", "General Checkup"]
+      "skills": ["Brake Service", "Suspension", "General Checkup"],
+      "img": "mech4.png"
     },
     {
       "firstName" :"Alan",
@@ -15,7 +16,8 @@
       "password": "password12345",
       "about": "Urna nunc id cursus metus aliquam eleifend mi. Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. Pellentesque habitant morbi tristique senectus et netus et malesuada. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. ",
       "location": "Chicago",
-      "skills": ["Headlights", "Brake", "General Checkup"]
+      "skills": ["Headlights", "Brake", "General Checkup"],
+      "img": "mech3.png"
     },
     {
       "firstName" :"Amiko",
@@ -24,7 +26,8 @@
       "password": "password12345",
       "about": "Et tortor at risus viverra adipiscing at in tellus integer. Fames ac turpis egestas sed tempus. Eleifend quam adipiscing vitae proin sagittis.",
       "location": "Berwyn",
-      "skills": ["General Checkup"]
+      "skills": ["General Checkup"],
+      "img": "mech5.png"
     },
     {
       "firstName" :"John",
@@ -35,7 +38,8 @@
       "password": "password12345",
       "skills": [
         "Oil Change",
-        "Paint Job"]
+        "Paint Job"],
+        "img": "mech2.png"
     },
     {
       "firstName" :"Testy",
@@ -44,7 +48,8 @@
       "password": "password12345",
       "about": "I can help with your emissions",
       "location": "Skokie",
-      "skills": ["Emissions Test"]
+      "skills": ["Emissions Test"],
+      "img": "mech1.png"
     },
     {
       "firstName" :"Ed",
@@ -56,7 +61,8 @@
       "skills": [
         "Oil Change",
         "Tire Rotation"
-      ]
+      ],
+      "img": "mech6.png"
     }
   ]
   
