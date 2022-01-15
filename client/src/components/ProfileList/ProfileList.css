@@ -14,9 +14,10 @@
     align-items: center;
     justify-content: center;
     height: 200px;
+    margin: 20px 20px 20px 20px;
     transition: 0.3s;
     border: 2px solid black;
-    margin-bottom: 10px;
+    border-radius: 15px;
 }
 
 .card-body:hover {
@@ -28,7 +29,7 @@
 }
 
 .seeProfileBtn {
-    width: 50%;
+    width: 90%;
 }
 
 .searchForm {

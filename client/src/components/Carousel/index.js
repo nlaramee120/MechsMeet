@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
+import "./Carousel.css";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_PROFILES } from "../../utils/queries";
@@ -32,7 +33,7 @@ export default function CarouselComponent() {
       {/* className="flex-row justify-space-between my-4" */}
       <div>
         <Carousel
-        centerMode
+          centerMode
           showStatus={false}
           dynamicHeight={false}
           emulateTouch
@@ -40,12 +41,13 @@ export default function CarouselComponent() {
           centerSlidePercentage={30}
           showThumbs={false}
           infiniteLoop
-          showIndicators>
+          showIndicators
+        >
           {profiles &&
             profiles.map((profile) => (
-                // Back up styling for <div> immediately below
-                // className="card col-12 col-xl-6"
-              <div key={profile._id}>
+              // Back up styling for <div> immediately below
+              // className="card col-12 col-xl-6"
+              <div className="card" key={profile._id}>
                 <div className="card-body">
                   <h3 className="card-title">
                     {profile.firstName} {profile.lastName} <br />
