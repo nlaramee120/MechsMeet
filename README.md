@@ -20,19 +20,42 @@ https://github.com/nlaramee120/project_3
 
 ## Description
 
-TBD
+When it comes to car issues, there are two types of car owners in this world:
+
+1) People who refuse to go to a dealership for repair because they refuse to pay an arm and a leg
+2) People whose car is out of warranty
+
+This app answers the notorious question, "***Do you know someone who knows a mechanic who might know what's wrong with my car and can help?***"
+
+This app is designed as a networking and servicing app to connect mechanics around the world with people in need of their services -- similar to Tinder or Skillshare.
 
 ## Final Product Image
 
-- Image of final product/app<br>
+- Images/Videos of final product/app<br>
 <img src="./assets/ss1.png" alt="Final Product" width="900">
 
 ## User Story
 ```
-GIVEN 
+GIVEN a functional app and simple user face
 
-WHEN 
-THEN 
+WHEN I first load the app
+THEN I am presented with a simple/minimalist UI for easy navaigation and user-friendly UX experience
+
+***Mechanic UI/UX***
+WHEN I click "Start offering your services now!"
+THEN I am presented with a sign-up page to create a profile as a mechanic, in which I am automatically redirected to my profile page where I can view/edit my personal information.
+
+***Guest UI/UX***
+WHEN I first load the app
+THEN I am presented with a carousel that will list mechanics near me
+    or
+THEN I am presented with an input field where I can enter a specific car issue to narrow/filter my search to specific mechanics with specialitions/skillsets pertaining to my needs
+
+WHEN I click "See profile" on a result within the carousel
+THEN I am presented with more detailed information about the mechanic
+
+WHEN I need to pay a mechanic for services rendered
+THEN I click on "Pay <mechanic name>" within a profile to be redirected to an inegrated, trusted, payment site where I can enter my card information and pay as needed (I will be notified of a successfull payment and directed back to the homepage when a payment is completed)
 ```
 
 ## Installation and Instructions
