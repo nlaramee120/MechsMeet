@@ -28,11 +28,24 @@ export default function CarouselComponent() {
           </button>
         </div>
       </div>
-      <Carousel>
-        <div className="flex-row justify-space-between my-4">
+      {/* Back up styling for <div> immediately below */}
+      {/* className="flex-row justify-space-between my-4" */}
+      <div>
+        <Carousel
+        centerMode
+          showStatus={false}
+          dynamicHeight={false}
+          emulateTouch
+          swipeScrollTolerance={50}
+          centerSlidePercentage={30}
+          showThumbs={false}
+          infiniteLoop
+          showIndicators>
           {profiles &&
             profiles.map((profile) => (
-              <div className="card col-12 col-xl-6" key={profile._id}>
+                // Back up styling for <div> immediately below
+                // className="card col-12 col-xl-6"
+              <div key={profile._id}>
                 <div className="card-body">
                   <h3 className="card-title">
                     {profile.firstName} {profile.lastName} <br />
@@ -49,8 +62,8 @@ export default function CarouselComponent() {
                 </div>
               </div>
             ))}
-        </div>
-      </Carousel>
+        </Carousel>
+      </div>
     </div>
   );
 }

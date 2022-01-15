@@ -12,22 +12,22 @@ header {
     display: flex;
 }
 
-.myProfile,
-.login {
+/* .myProfile,
+.loginBtn {
     margin-right: 5px;
-}
+} */
 
-.login,
-.logout {
+.loginBtn,
+.logoutBtn {
     color: lightslategray !important;
     width: 130px;
-    border: 1px solid lightslategray;
+    /* border: 1px solid lightslategray;
     border-radius: 3rem;
-    transition: 0.3s;
+    transition: 0.3s; */
 }
 
-.logout:hover,
-.login:hover {
+.logoutBtn:hover,
+.loginBtn:hover {
     background-color: lightslategray;
     color: white !important;
   }
