@@ -33,6 +33,17 @@ export const ADD_SKILL = gql`
   }
 `;
 
+export const UPDATE_MYP = gql`
+mutation updateMyProfile($profileId: ID!, $about: String!){
+  updateMyProfile( profileId: $profileId, about: $about) {
+   profile{
+      _id
+      about
+    }
+  }
+}
+`;
+
 export const LOGIN = gql`
   mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
