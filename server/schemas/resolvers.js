@@ -1,4 +1,4 @@
-const { Profile} = require('../models');
+const { Profile, Service } = require('../models');
 const { signToken } = require('../utils/auth');
 const { AuthenticationError } = require('apollo-server-express');
 
@@ -19,6 +19,12 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    services: async () => {
+      return Service.find();
+    },
+    service: async (parenet, { serviceId }) => {
+      return Service.findOne({ _id: serviceId })
+    } 
   },
 
   // Query: {

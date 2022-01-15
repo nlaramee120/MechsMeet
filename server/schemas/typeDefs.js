@@ -11,6 +11,13 @@ const typeDefs = gql`
     skills: [String]!
   }
 
+  type Service {
+    _id: ID
+    name: String
+    priceInCents: Int
+    quantitiy: Int
+  }
+
   type Auth {
     token: ID
     profile: Profile
@@ -20,7 +27,8 @@ const typeDefs = gql`
     profiles: [Profile]!
     profile(profileId: ID!): Profile
     me: Profile
-  
+    service(serviceId: ID!): Service
+    services: [Service]!
   }
 
   type Mutation {

@@ -41,3 +41,22 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_SERVICES = gql`
+  query allServices {
+    services {
+      name
+      priceInCents
+      quantity
+    }
+  }`;
+
+export const QUERY_SINGLE_SERVICE = gql`
+  query singleService {
+    service {
+      _id
+      name
+      priceInCents
+      quantity
+    }
+  }`;

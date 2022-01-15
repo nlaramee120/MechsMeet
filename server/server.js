@@ -7,6 +7,7 @@ const db = require('./config/connection');
 const { typeDefs, resolvers } = require('./schemas');
 const cors = require("cors")
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY)
+// import { QUERY_SINGLE_SERVICE } from '../client/src/utils/queries'
 
 
 
