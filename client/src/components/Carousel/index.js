@@ -2,7 +2,6 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
-import "./Carousel.css";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_PROFILES } from "../../utils/queries";
@@ -59,7 +58,7 @@ export default function CarouselComponent() {
                     className="seeProfileBtn btn btn-primary"
                     to={`/profiles/${profile._id}`}
                   >
-                    See mechanic profile
+                    See profile
                   </Link>
                 </div>
               </div>
