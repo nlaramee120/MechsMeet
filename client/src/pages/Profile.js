@@ -10,7 +10,7 @@ import "./Pages.css";
 
 import { QUERY_SINGLE_PROFILE } from "../utils/queries";
 
-import StripeButton from "../components/Stripe/script";
+import { genCheckout, StripeButton } from "../components/Stripe/script";
 
 const Profile = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
@@ -32,7 +32,7 @@ const Profile = () => {
       <p class="payText">Have services been completed?</p>
 
       <button
-        onClick={StripeButton}
+        onClick={genCheckout}
         type="button"
         class="payMech btn btn-info"
         data-bs-toggle="modal"

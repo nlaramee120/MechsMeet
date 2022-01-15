@@ -30,8 +30,12 @@ app.use(express.json());
 app.use(cors())
 
 const storeItems = new Map([
-  [1, { priceInCents: 10000, name: "Learn React Today" }],
-  [2, { priceInCents: 20000, name: "Learn CSS Today" }],
+  [1, { priceInCents: 9500, name: "General Checkup" }],
+  [2, { priceInCents: 13000, name: "Brake Service" }],
+  [3, { priceInCents: 18000, name: "Headlights" }],
+  [4, { priceInCents: 5000, name: "Oil Change" }],
+  [5, { priceInCents: 25000, name: "Paint Job" }],
+  [6, { priceInCents: 2000, name: "Emissions Test" }],
 ])
 
 app.post("/create-checkout-session", async (req, res) => {
