@@ -1,3 +1,4 @@
 const Profile = require('./Profile');
+const Service = require('./Service')
 
-module.exports = { Profile };
+module.exports = { Profile, Service };

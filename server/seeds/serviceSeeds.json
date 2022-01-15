@@ -1,0 +1,44 @@
+[
+    {
+        "name": "General Checkup",
+        "priceInCents": 9500,
+        "quantity": 1,
+        "_id": 1
+    },
+    {
+        "name": "Brake Service",
+        "priceInCents": 13000,
+        "quantity": 1,
+        "_id": 2
+    },
+    {
+        "name": "Headlights",
+        "priceInCents": 18000,
+        "quantity": 1,
+        "_id": 3
+    },
+    {
+        "name": "Oil Change",
+        "priceInCents": 5000,
+        "quantity": 1,
+        "_id": 4
+    },
+    {
+        "name": "Paint Job",
+        "priceInCents": 25000,
+        "quantity": 1,
+        "_id": 5
+    },
+    {
+        "name": "Tire Rotation",
+        "priceInCents": 2500,
+        "quantity": 1,
+        "_id": 6
+    },
+    {
+        "name": "Emissions Test",
+        "priceInCents": 2000,
+        "quantity": 1,
+        "_id": 7
+    }
+]
