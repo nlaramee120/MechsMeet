@@ -48,7 +48,7 @@ export default function CarouselComponent() {
               // className="card col-12 col-xl-6"
               <div className="card" key={profile._id}>
                 <div className="card-body">
-                  <img src={`/images/${profile.img}`} alt="text" />
+                  <img className="cardImg" src={`/images/${profile.img}`} alt="text" />
                   <h3 className="card-title">
                     {profile.firstName} {profile.lastName} <br />
                     <span className="mechLoc">
