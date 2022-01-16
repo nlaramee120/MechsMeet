@@ -19,6 +19,12 @@
     border-radius: 15px;
 }
 
+@media screen and (max-width: 600px) {
+    .slide {
+        min-width: 50% !important;
+    }
+}
+
 .cardImg {
     width: auto;
     border-top-left-radius: 10px;

@@ -40,6 +40,7 @@ const ProfileForm = () => {
 
   return (
     <div className="mechSignUp">
+      {/* <img src="/images/group2.jpg" alt="text" /> */}
       <p className="mechSignUpText">Are you a mechanic?</p>
         <Link className="btn btn-info" to="/signup">
           <h1 className="m-1" style={{ fontSize: "1rem", textAlign: "center" }}>
