@@ -79,7 +79,7 @@ const resolvers = {
       return Profile.findOneAndUpdate(
         { _id: profileId },
         {
-          $addToSet: { about: about },
+          $set: { about: about },
         },
         {
           new: true,
@@ -87,6 +87,14 @@ const resolvers = {
         }
       );
     },
+
+    // updateMyProfile: async (parent, args, context) => {
+    //   if (context.user) {
+    //     return await Profile.findByIdAndUpdate(context.profileId, args, { new: true });
+    //   }
+
+    //   throw new AuthenticationError('Not logged in');
+    // },
 
     removeSkill: async (parent, { profileId, skill }) => {
       return Profile.findOneAndUpdate(
