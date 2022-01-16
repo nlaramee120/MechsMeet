@@ -14,7 +14,7 @@ import { QUERY_ME } from "../utils/queries";
 import { UPDATE_MYP } from "../utils/mutations";
 
 const Myprofile = () => {
-  const [about, setabout] = useState("");
+  const [about, setAbout] = useState("");
   const [updateMyProfile, { error }] = useMutation(UPDATE_MYP);
   const handleFormSubmit = async (event) => {
     try {
@@ -25,7 +25,7 @@ const Myprofile = () => {
         variables: { profileId, about },
       });
 
-      setabout("");
+      setAbout("");
     } catch (err) {
       console.error(err);
     }
@@ -48,7 +48,7 @@ const Myprofile = () => {
         You need to be logged in to see your profile page.
         <br />
         <Link to="/login">Login Here!</Link> or{" "}
-        <Link to="/signup">Signup Here!.</Link>
+        <Link to="/signup">Signup Here!</Link>
       </h4>
     );
   }
@@ -82,10 +82,10 @@ const Myprofile = () => {
         >
           <div className="col-12 col-lg-9">
             <input
-              placeholder="About Me..."
+              placeholder= {profile.about}
               value={about}
               className="form-input w-100"
-              onChange={(event) => setabout(event.target.value)}
+              onChange={(event) => setAbout(event.target.value)}
             />
           </div>
           <div className="col-12 col-lg-3">
