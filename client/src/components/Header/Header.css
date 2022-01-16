@@ -12,6 +12,9 @@ header {
     display: flex;
 }
 
+.headerImg {
+    width: 100%;
+}
 /* .myProfile,
 .loginBtn {
     margin-right: 5px;
