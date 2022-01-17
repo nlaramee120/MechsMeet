@@ -17,6 +17,7 @@ import StripeButton from "./components/Stripe/script.js"
 import Success from './components/Stripe/Success'
 import Cancel from './components/Stripe/Cancel'
 import Myprofile from './pages/myProfile';
+import TireRotation from "./components/ServiceBtns/tireRotation";
 
 // const client = new ApolloClient({
 //   uri: "/graphql",

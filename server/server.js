@@ -35,7 +35,8 @@ const storeItems = new Map([
   [3, { priceInCents: 18000, name: "Headlights" }],
   [4, { priceInCents: 5000, name: "Oil Change" }],
   [5, { priceInCents: 25000, name: "Paint Job" }],
-  [6, { priceInCents: 2000, name: "Emissions Test" }],
+  [6, { priceInCents: 2500, name: "Tire Rotation" }],
+  [7, { priceInCents: 2000, name: "Emissions Test" }],
 ])
 
 app.post("/create-checkout-session", async (req, res) => {
