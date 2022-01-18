@@ -75,11 +75,49 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
 
-    updateMyProfile: async (parent,{ profileId, about}) => {
+    updateMyAbout: async (parent,{ profileId, about}) => {
       return Profile.findOneAndUpdate(
         { _id: profileId },
         {
-          $set: { about: about },
+          $set: { about: about},
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
+
+    updateMyLocation: async (parent,{ profileId,location}) => {
+      return Profile.findOneAndUpdate(
+        { _id: profileId },
+        {
+          $set: { location:location },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
+
+    updateMyEmail: async (parent,{ profileId, email}) => {
+      return Profile.findOneAndUpdate(
+        { _id: profileId },
+        {
+          $set: { email: email},
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
+    updateMyPhone: async (parent,{ profileId, phone}) => {
+      return Profile.findOneAndUpdate(
+        { _id: profileId },
+        {
+          $set: { phone: phone},
         },
         {
           new: true,
