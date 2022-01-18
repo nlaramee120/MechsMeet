@@ -35,12 +35,11 @@ export const ADD_SKILL = gql`
 
 export const UPDATE_MYP = gql`
 mutation updateMyProfile($profileId: ID!, $about: String!){
-  updateMyProfile( profileId: $profileId, about: $about) {
-   profile{
+  updateMyProfile( profileId: $profileId, about: $about) 
+ {
       _id
       about
     }
-  }
 }
 `;
 
