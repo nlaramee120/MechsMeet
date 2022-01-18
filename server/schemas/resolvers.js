@@ -135,13 +135,17 @@ const resolvers = {
     // },
 
     removeSkill: async (parent, { profileId, skill }) => {
+      if (!profileId) {
+        console.log('Not Logged in');
+      }
       return Profile.findOneAndUpdate(
         { _id: profileId },
         { $pull: { skills: skill } },
         { new: true }
       );
     },
-
+    
+    
     login: async (parent, { email, password }) => {
       const profile = await Profile.findOne({ email });
 
