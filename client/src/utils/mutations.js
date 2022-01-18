@@ -81,3 +81,13 @@ export const LOGIN = gql`
     }
   }
 `;
+
+
+export const REMOVE_SKILL = gql`
+  mutation removeSkill($profileId: ID!, $skill: String!) {
+    removeSkill(profileId: $profileId, skill: $skill) {
+      _id
+      skills
+    }
+  }
+`;

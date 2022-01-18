@@ -224,8 +224,12 @@ const Myprofile = () => {
           </div>
         </form>
         <h3 className="card-header">Specializations and Skill Sets:</h3>
-
-        {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
+        {profile.skills?.length > 0 && (
+        <SkillsList
+          skills={profile.skills}
+          isLoggedInUser={ true}
+        />
+      )}
 
         <div
           className="addSkill my-4 p-4"
