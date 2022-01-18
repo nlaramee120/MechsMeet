@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Dropbox from '../components/Dropbox'
 
 // Import the `useParams()` hook
 import { useParams } from "react-router-dom";
@@ -31,15 +32,7 @@ const Profile = () => {
       <div className="payMechCont">
       <p class="payText">Have services been completed?</p>
 
-      <button
-        onClick={genCheckup}
-        type="button"
-        class="payMech btn btn-info"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Pay {profile.firstName} {profile.lastName}
-      </button>
+      <Dropbox />
       </div>
 
       <div className="mechInfo">
