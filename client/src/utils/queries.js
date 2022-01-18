@@ -11,6 +11,7 @@ export const QUERY_PROFILES = gql`
       location
       skills
       img
+      phone
     }
   }
 `;
@@ -25,6 +26,7 @@ export const QUERY_SINGLE_PROFILE = gql`
       about
       location
       skills
+      phone
     }
   }
 `;
@@ -37,6 +39,7 @@ export const QUERY_ME = gql`
       lastName
       email
       about
+      phone
       location
       skills
       img

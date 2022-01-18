@@ -27,21 +27,49 @@ export const ADD_SKILL = gql`
   mutation addSkill($profileId: ID!, $skill: String!) {
     addSkill(profileId: $profileId, skill: $skill) {
       _id
-      name
       skills
     }
   }
 `;
 
-export const UPDATE_MYP = gql`
-mutation updateMyProfile($profileId: ID!, $about: String!){
-  updateMyProfile( profileId: $profileId, about: $about) 
+export const UPDATE_ABOUT = gql`
+mutation updateMyAbout($profileId: ID!, $about: String!){
+  updateMyAbout( profileId: $profileId, about: $about) 
  {
       _id
       about
     }
 }
 `;
+
+export const UPDATE_LOCATION = gql`
+mutation updateMyLocation($profileId: ID!,$location: String!){
+  updateMyLocation( profileId: $profileId, location :$location) 
+ {
+      _id
+      location
+    }
+}
+`;
+export const UPDATE_EMAIL = gql`
+mutation updateMyEmail($profileId: ID!,$email: String!){
+  updateMyEmail( profileId: $profileId, email :$email) 
+ {
+      _id
+      email
+    }
+}
+`;
+export const UPDATE_PHONE = gql`
+mutation updateMyPhone($profileId: ID!,$phone: String!){
+  updateMyPhone( profileId: $profileId, phone :$phone) 
+ {
+      _id
+      phone
+    }
+}
+`;
+
 
 export const LOGIN = gql`
   mutation login($email: String!, $password: String!) {
