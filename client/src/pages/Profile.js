@@ -49,8 +49,8 @@ const Profile = () => {
         <p>{profile.about}</p>
         <h3>Location:</h3>
         <p>{profile.location}</p>
-        <h3>Contact</h3>
-        <p>{profile.email}</p>
+        <h3>Contact Info:</h3>
+        <p>{profile.email} {profile.phone} </p>
         <h3 className="card-header">Specializations and Skill Sets</h3>
 
         {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
