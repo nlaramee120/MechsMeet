@@ -18,6 +18,7 @@ import Success from './components/Stripe/Success'
 import Cancel from './components/Stripe/Cancel'
 import Myprofile from './pages/myProfile';
 import TireRotation from "./components/ServiceBtns/tireRotation";
+import Dropbox from './components/Dropbox'
 
 // const client = new ApolloClient({
 //   uri: "/graphql",
