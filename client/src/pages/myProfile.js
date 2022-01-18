@@ -11,14 +11,21 @@ import "./Pages.css";
 import Auth from "../utils/auth";
 
 import { QUERY_ME } from "../utils/queries";
-import { UPDATE_MYP } from "../utils/mutations";
+import { UPDATE_ABOUT, UPDATE_LOCATION,UPDATE_EMAIL, UPDATE_PHONE } from "../utils/mutations";
+
 
 
 
 
 const Myprofile = () => {
   const [about, setAbout] = useState("");
-  const [updateMyProfile, { error }] = useMutation(UPDATE_MYP);
+  const [location, setLocation] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [updateMyAbout] = useMutation(UPDATE_ABOUT);
+  const [updateMyLocation] = useMutation(UPDATE_LOCATION);
+  const [updateMyPhone] = useMutation(UPDATE_PHONE);
+  const [updateMyEmail] = useMutation(UPDATE_EMAIL);
 
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { profileId } = useParams();
@@ -48,11 +55,60 @@ const Myprofile = () => {
 
     
     
-   await updateMyProfile({
+   await updateMyAbout({
         variables: { profileId : data.me._id, about },
       });
 
       setAbout("");
+   
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const handleFormSubmit2 = async (event) => {
+    event.preventDefault();
+    try {
+
+    
+    
+   await updateMyLocation({
+        variables: { profileId : data.me._id,location },
+      });
+
+     
+      setLocation("");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const handleFormSubmit3 = async (event) => {
+    event.preventDefault();
+    try {
+
+    
+    
+   await updateMyEmail({
+        variables: { profileId : data.me._id,email },
+      });
+
+     
+      setEmail("");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const handleFormSubmit4 = async (event) => {
+    event.preventDefault();
+    try {
+
+    
+    
+   await updateMyPhone({
+        variables: { profileId : data.me._id,phone },
+      });
+
+     
+      setPhone("");
     } catch (err) {
       console.error(err);
     }
@@ -88,6 +144,7 @@ const Myprofile = () => {
           onSubmit={handleFormSubmit}
         >
           <div className="col-12 col-lg-9">
+          <p>Update About Section</p>
             <input
               placeholder= {profile.about}
               value={about}
@@ -103,21 +160,69 @@ const Myprofile = () => {
         </form>
 
         <h3>Location:</h3>
-        <p
-          className="editInfo"
-          contentEditable="true"
-          suppressContentEditableWarning={true}
+        <form
+          className="flex-row justify-center justify-space-between-md align-center"
+          onSubmit={handleFormSubmit2}
         >
-          {profile.location}
-        </p>
+          <div className="col-12 col-lg-9">
+          <p> Update Location</p>
+            <input
+              placeholder= {profile.location}
+              value={location}
+              className="form-input w-100"
+              onChange={(event) => setLocation(event.target.value)}
+            />
+          </div>
+          <div className="col-12 col-lg-3">
+            <button className="btn btn-info btn-inline py-3" type="submit">
+              Update!
+            </button>
+          </div>
+        </form>
         <h3>Contact Info:</h3>
-        <p
-          className="editInfo"
-          contentEditable="true"
-          suppressContentEditableWarning={true}
+        <form
+          className="flex-row justify-center justify-space-between-md align-center"
+          onSubmit={handleFormSubmit3}
         >
-          {profile.email}{" "}
-        </p>
+          <div className="col-12 col-lg-9">
+          <p> Update Email</p>
+            <input
+              type= "email"
+              placeholder= {profile.email}
+              value={email}
+              className="form-input w-100"
+              onChange={(event) => setEmail(event.target.value)}
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            />
+          </div>
+          <div className="col-12 col-lg-3">
+            <button className="btn btn-info btn-inline py-3" type="submit">
+              Update!
+            </button>
+          </div>
+          </form>
+          <form
+          className="flex-row justify-center justify-space-between-md align-center"
+          onSubmit={handleFormSubmit4}
+        >
+       
+          <div className="col-12 col-lg-9">
+          <p> Update Phone Number (###-###-####)</p>
+            <input
+              type= "tel"
+              placeholder= {profile.phone}
+              value={phone}
+              className="form-input w-100"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              onChange={(event) => setPhone(event.target.value)}
+            />
+          </div>
+          <div className="col-12 col-lg-3">
+            <button className="btn btn-info btn-inline py-3" type="submit">
+              Update!
+            </button>
+          </div>
+        </form>
         <h3 className="card-header">Specializations and Skill Sets:</h3>
 
         {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
