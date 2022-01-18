@@ -13,23 +13,12 @@ import Auth from "../utils/auth";
 import { QUERY_ME } from "../utils/queries";
 import { UPDATE_MYP } from "../utils/mutations";
 
+
+
+
 const Myprofile = () => {
   const [about, setAbout] = useState("");
   const [updateMyProfile, { error }] = useMutation(UPDATE_MYP);
-  const handleFormSubmit = async (event) => {
-    try {
-      console.log(profileId);
-      debugger;
-      // its not pulling the profileId
-      const data = await updateMyProfile({
-        variables: { profileId, about },
-      });
-
-      setAbout("");
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { profileId } = useParams();
@@ -40,7 +29,7 @@ const Myprofile = () => {
 
   // const profile = data?.profile || {};
   const profile = data?.me || data?.profile || {};
-  console.log(data?.me || data?.profile);
+  // console.log(data?.me || data?.profile);
   //if not logged in
   if (!data?.me || data?.profile) {
     return (
@@ -52,8 +41,25 @@ const Myprofile = () => {
       </h4>
     );
   }
+  // console.log(data.me, "test");
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+
+    
+    
+   await updateMyProfile({
+        variables: { profileId : data.me._id, about },
+      });
+
+      setAbout("");
+    } catch (err) {
+      console.error(err);
+    }
+  };
   // redirect to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data._id === profileId)
+ 
     return <Redirect to="/me:/profileId" />;
 
   if (loading) {
@@ -67,6 +73,7 @@ const Myprofile = () => {
   //     </h4>
   //   );
   // }
+
 
   return (
     <div>
