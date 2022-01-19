@@ -2,11 +2,11 @@
     text-align: center;
 }
 
-#issueInput {
+/* #issueInput {
     width: 60%;
     height: 35px;
     margin-right: 5px;
-}
+} */
 
 .card-body {
     display: flex;
@@ -45,10 +45,10 @@
 
 .searchForm {
     display: flex;
-    flex-direction: row;
-    border: 2px solid black;
+    justify-content: center;
 }
 
 .searchFormInput {
-    width: 100%;
+    width: 70%;
 }
+
