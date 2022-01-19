@@ -58,7 +58,7 @@ const Header = () => {
             </div>
           </div>
         </header>
-        <img className="headerImg" src="/images/group2crop.png" alt="text" />
+        {/* <img className="headerImg" src="/images/group2crop.png" alt="text" /> */}
       </div>
     );
 };
