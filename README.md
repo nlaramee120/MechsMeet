@@ -27,7 +27,7 @@ When it comes to car issues, there are two types of car owners in this world:
 
 This app answers the notorious question, "***Do you know someone who knows a mechanic who might know what's wrong with my car and can help?***"
 
-This app is designed as a networking and servicing app to connect mechanics around the world with people in need of their services -- similar to Tinder or Skillshare.
+This app is designed as a networking and servicing app to connect local mechanics and people in need of their services -- similar to Tinder or Skillshare.
 
 ## Final Product Image
 
