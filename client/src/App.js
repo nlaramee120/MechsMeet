@@ -3,27 +3,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
 
-// import Home from "./pages/Home";
-// import StripeContainer from "./components/Container";
-// import './App.css'
-
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import StripeButton from "./components/Stripe/script.js"
 import Success from './components/Stripe/Success'
 import Cancel from './components/Stripe/Cancel'
 import Myprofile from './pages/myProfile';
-import TireRotation from "./components/ServiceBtns/tireRotation";
-import Dropbox from './components/Dropbox'
 
-// const client = new ApolloClient({
-//   uri: "/graphql",
-//   cache: new InMemoryCache(),
-// });
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,22 +32,6 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
-// function App() {
-//   return (
-//     <ApolloProvider client={client}>
-//       <Router>
-//         <div>
-//             <Route>
-//               <StripeButton />
-//               <Route exact path="/success" component={Success} />
-//               <Route exact path="/cancel" component={Cancel} />
-//            </Route>
-//         </div>
-//       </Router>
-//     </ApolloProvider>
-//   );
-// }
 
 function App() {
   return (
