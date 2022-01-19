@@ -1,42 +1,71 @@
 header {
-    background-color: #2d3e50;
-    padding: 15px 0 15px 0;
+  background-color: #2d3e50;
+  padding: 15px 0 15px 0;
+}
+
+.homeLink {
+  width: 6%;
+  margin-left: 25px;
+  /* border: 2px solid red; */
 }
 
 .logo {
-    width: 7%;
+  width: 100%;
 }
 
 .headerLinks {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid black; */
 }
 
 .navLinks {
-    display: flex;
+  display: flex;
+  /* border: 2px solid blue; */
 }
 
 .headerImg {
-    width: 100%;
+  width: 100%;
 }
-/* .myProfile,
-.loginBtn {
-    margin-right: 5px;
-} */
+
+.myProfile {
+  color: lightslategray !important;
+}
 
 .loginBtn,
 .logoutBtn {
-    color: lightslategray !important;
-    width: 130px;
-    /* border: 1px solid lightslategray;
+  color: lightslategray !important;
+  width: 130px;
+  /* border: 1px solid lightslategray;
     border-radius: 3rem;
     transition: 0.3s; */
 }
 
 .logoutBtn:hover,
 .loginBtn:hover {
-    background-color: lightslategray;
-    color: white !important;
+  background-color: lightslategray;
+  color: white !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .homeLink {
+    width: 30%;
+    margin-left: 0px;
   }
+  .logo {
+    width: 100%;
+  }
+
+  .headerLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
