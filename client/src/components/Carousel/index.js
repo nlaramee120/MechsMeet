@@ -26,12 +26,14 @@ export default function CarouselComponent() {
             className="form-control"
             placeholder="i.e. engine, transmission, body work, etc."
           />
-          <button type="button" className="btn btn-primary">
-            Search
-          </button>
         </div>
+
       </div> */}
-       
+
+//         <button type="button" className="btn btn-primary">
+//           Search
+//         </button>
+//       </div>
       {/* Back up styling for <div> immediately below */}
       {/* className="flex-row justify-space-between my-4" */}
       {/* this is the list of profiles */}
@@ -54,7 +56,11 @@ export default function CarouselComponent() {
               // className="card col-12 col-xl-6"
               <div key={profile._id}>
                 <div className="card-body">
-                  <img className="cardImg" src={`/images/${profile.img}`} alt="text" />
+                  <img
+                    className="cardImg"
+                    src={`/images/${profile.img}`}
+                    alt="text"
+                  />
                   <h3 className="card-title">
                     {profile.firstName} {profile.lastName} <br />
                     <span className="mechLoc">

@@ -40,7 +40,7 @@ const SkillForm = ({ profileId }) => {
 
         <div className="col-12 col-lg-3">
           <button
-            className="btn bg-primary btn-info btn-block py-3"
+            className="btn btn-info btn-block py-3"
             type="submit"
           >
             Add

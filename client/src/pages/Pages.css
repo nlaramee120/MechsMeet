@@ -31,10 +31,31 @@
     border-bottom: 2px solid black;
 }
 
-.editInfo {
-    width: 50%;
-    padding: 0 20px 0 20px;
-    border: 1px solid black;
+.profileTitle {
+    margin-top: 25px;
+}
+
+.profilePic {
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.aboutInput {
+    height: 125px;
+}
+
+.updateBtn {
+    margin-top: 10px;
+}
+
+.emailBtn {
+    margin-bottom: 10px;
+}
+
+.phoneFormat {
+    font-size: 15px;
+    font-style: italic;
 }
 
 .addSkill {

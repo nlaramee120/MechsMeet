@@ -37,6 +37,7 @@ const Home = () => {
   );
 };
 
+
 // import { QUERY_MATCHUPS } from '../utils/queries';
 
 // const Home = () => {
@@ -53,4 +54,4 @@ const Home = () => {
 //   );
 // };
 
-export default Home;
+
