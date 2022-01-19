@@ -5,6 +5,8 @@ import Auth from "../utils/auth";
 import { ADD_PROFILE } from "../utils/mutations";
 import "./Pages.css"
 
+
+
 function Signup(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [addProfile] = useMutation(ADD_PROFILE);
@@ -17,6 +19,7 @@ function Signup(props) {
         password: formState.password,
         firstName: formState.firstName,
         lastName: formState.lastName,
+        img: "avatar.jpeg"
         // location: formState.location,
         // about: formState.about,
       },
