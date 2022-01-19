@@ -8,13 +8,11 @@ const Header = () => {
   if (Auth.loggedIn())
     return (
       <div>
-        <header className="bg-primary text-dark mb-4 display-flex align-center">
-          <div className="headerLinks container flex-column justify-space-between-lg justify-center ">
+        <header className="header text-dark mb-4">
+          <div className="headerLinks">
             <div className="homeLink">
-              <Link className="text-dark" to="/">
-                <h1 className="m-0" style={{ fontSize: "1.5rem" }}>
-                  Mechanic Looker Upper
-                </h1>
+              <Link to="/">
+                <img className="logo" src={`/images/logo1.png`} alt="text" />
               </Link>
             </div>
             <div className="navLinks">
@@ -37,7 +35,7 @@ const Header = () => {
         Find your man (or woman) in uniform...
       </p> */}
         </header>
-        <img className="headerImg" src="/images/group2crop.png" alt="text" />
+        {/* <img className="headerImg" src="/images/group2crop.png" alt="text" /> */}
       </div>
     );
 
