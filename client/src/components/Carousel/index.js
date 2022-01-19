@@ -30,10 +30,10 @@ export default function CarouselComponent() {
 
       </div> */}
 
-//         <button type="button" className="btn btn-primary">
+{/* //         <button type="button" className="btn btn-primary">
 //           Search
 //         </button>
-//       </div>
+//       </div> */}
       {/* Back up styling for <div> immediately below */}
       {/* className="flex-row justify-space-between my-4" */}
       {/* this is the list of profiles */}
