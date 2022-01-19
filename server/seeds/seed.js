@@ -11,7 +11,6 @@ db.once('open', async () => {
     await Profile.create(profileSeeds);
 
     console.log('all done!');
-    console.log(serviceSeeds)
     process.exit(0);
   } catch (err) {
     throw err;

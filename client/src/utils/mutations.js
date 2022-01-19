@@ -6,12 +6,14 @@ mutation addProfile(
   $lastName: String!
   $email: String!
   $password: String!
+  $img: String!
 ) {
   addProfile(
     firstName: $firstName
     lastName: $lastName
     email: $email
     password: $password
+    img:$img
   ) {
     token
     profile {
