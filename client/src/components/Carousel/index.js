@@ -7,15 +7,18 @@ import { useQuery } from "@apollo/client";
 import { QUERY_PROFILES } from "../../utils/queries";
 // import ProfileList from "../ProfileList";
 
+
 export default function CarouselComponent() {
   const { loading, data } = useQuery(QUERY_PROFILES);
   const profiles = data?.profiles || [];
 
+ 
+
   return (
     <div className="profileListCont">
-      <h3>Search for a mechanic by issue...</h3>
+      <h3>Search for a mechanic! </h3>
 
-      <div className="searchForm input-group">
+      {/* <div className="searchForm input-group">
         <div className="searchFormInput form-outline">
           <input
             type="search"
@@ -27,9 +30,12 @@ export default function CarouselComponent() {
             Search
           </button>
         </div>
-      </div>
+      </div> */}
+       
       {/* Back up styling for <div> immediately below */}
       {/* className="flex-row justify-space-between my-4" */}
+      {/* this is the list of profiles */}
+    
       <div>
         <Carousel
           centerMode
