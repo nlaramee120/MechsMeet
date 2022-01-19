@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_PROFILES } from "../../utils/queries";
-// import ProfileList from "../ProfileList";
+import ProfileList from "../ProfileList";
 
 
 export default function CarouselComponent() {
@@ -54,7 +54,7 @@ export default function CarouselComponent() {
             profiles.map((profile) => (
               // Back up styling for <div> immediately below
               // className="card col-12 col-xl-6"
-              <div key={profile._id}>
+              <div className="cardCont" key={profile._id}>
                 <div className="card-body">
                   <img
                     className="cardImg"
