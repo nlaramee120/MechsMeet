@@ -16,7 +16,7 @@ https://github.com/nlaramee120/project_3
 3. [User Story](#User-Story)
 4. [Installation and Instructions](#Installation-and-Instructions)
 5. [License](#License)
-6. [Questions](#Questions)
+6. [Collaborators](#Collaborators)
 
 ## Description
 
