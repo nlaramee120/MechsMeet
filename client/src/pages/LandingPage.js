@@ -1,4 +1,4 @@
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
 
 const LandingPage = () => {
@@ -27,17 +27,21 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="intro2">
-      <img className="intro2pic" src="/images/group3.jpg" alt="text" />
+        <img className="intro2pic" src="/images/group3.jpg" alt="text" />
         <div className="intro2text">
           <h3>Mechanic with services to offer?</h3>
           <br></br>
           <p>
-            Looking to link up with locals who might be in need of your services? This is your one stop shop to connect with, meet with, and solve all their issues.<br></br><br></br>
+            Looking to link up with locals who might be in need of your
+            services? This is your one stop shop to connect with, meet with, and
+            solve all their issues.<br></br>
+            <br></br>
             -Create an account<br></br>
             -Tell em' about yourself and experience<br></br>
             -List your specialties and skills<br></br>
             -Wait for them to come knockin' at your garage!
-          </p><br></br>
+          </p>
+          <br></br>
           <Link className="btn btn-primary" to="/signup">
             <h1 className="m-1" style={{ fontSize: "1.2rem" }}>
               Start offering your services!
