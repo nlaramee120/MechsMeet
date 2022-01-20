@@ -2,23 +2,19 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
-
 import { useQuery } from "@apollo/client";
 import { QUERY_PROFILES } from "../../utils/queries";
 import ProfileList from "../ProfileList";
-
 
 export default function CarouselComponent() {
   const { loading, data } = useQuery(QUERY_PROFILES);
   const profiles = data?.profiles || [];
 
- 
-
   return (
     <div className="profileListCont">
-      
       <div>
-        <Carousel className="carouselProps"
+        <Carousel
+          className="carouselProps"
           showStatus={false}
           dynamicHeight={false}
           emulateTouch

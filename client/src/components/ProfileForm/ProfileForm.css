@@ -1,17 +1,16 @@
 .mechSignUp {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .mechSignUpText {
-    font-size: 15px;
-    margin-bottom: 0px !important;
+  font-size: 15px;
+  margin-bottom: 0px !important;
 }
 
 .signupFormCont {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }

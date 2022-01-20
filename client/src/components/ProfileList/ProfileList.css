@@ -14,7 +14,6 @@
     margin: 20px 20px 20px 20px;
     transition: 0.3s;
     background-color: orange;
-    /* border: 2px solid black; */
     border-radius: 15px;
 }
 
@@ -66,7 +65,6 @@
     .cardCont {
         width: 100%;
         padding: 0 3px 0 3px;
-        /* border: 2px solid red; */
     }
     .card-body {
         width: 100%;

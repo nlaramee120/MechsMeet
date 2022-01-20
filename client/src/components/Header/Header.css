@@ -6,7 +6,6 @@
 .homeLink {
   width: 6%;
   margin-left: 25px;
-  /* border: 2px solid red; */
 }
 
 .logo {
@@ -17,12 +16,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 2px solid black; */
 }
 
 .navLinks {
   display: flex;
-  /* border: 2px solid blue; */
 }
 
 .headerImg {
@@ -37,9 +34,6 @@
 .logoutBtn {
   color: lightslategray !important;
   width: 130px;
-  /* border: 1px solid lightslategray;
-    border-radius: 3rem;
-    transition: 0.3s; */
 }
 
 .logoutBtn:hover,
