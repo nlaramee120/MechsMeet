@@ -19,7 +19,7 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
-        <h4 className="footerText">&copy; {new Date().getFullYear()} - Mechanic Looker Upper</h4>
+        <h4 className="footerText">&copy; {new Date().getFullYear()} - MechsMeet</h4>
       </div>
     </footer>
   );

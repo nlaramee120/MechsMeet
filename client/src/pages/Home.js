@@ -15,6 +15,7 @@ const Home = () => {
 
   return (
     <main>
+      <h1>MechsMeet</h1>
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 mb-3 p-3">
           <ProfileForm />

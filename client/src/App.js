@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
@@ -12,6 +12,7 @@ import Signup from './pages/Signup';
 import Success from './components/Stripe/Success'
 import Cancel from './components/Stripe/Cancel'
 import Myprofile from './pages/myProfile';
+import LandingPage from './pages/LandingPage';
 
 
 const httpLink = createHttpLink({
@@ -42,7 +43,8 @@ function App() {
           <Header />
           <div className="container">
             {/* Define routes to render different page components at different paths */}
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/home" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             {/* Define a route that will take in variable data */}
