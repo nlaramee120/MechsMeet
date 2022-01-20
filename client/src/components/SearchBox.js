@@ -17,6 +17,7 @@ function SearchBox({ placeholder, data }) {
     }
     return (
         <div className='search'>
+             <h3>Search for a mechanic! </h3>   
             <div className="searchInputs">
                 <input type="text" placeholder={placeholder}
                     onChange={handleFilter} />

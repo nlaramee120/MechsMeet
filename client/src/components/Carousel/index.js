@@ -16,7 +16,7 @@ export default function CarouselComponent() {
 
   return (
     <div className="profileListCont">
-      <h3>Search for a mechanic! </h3>    
+      
       <div>
         <Carousel className="carouselProps"
           showStatus={false}
