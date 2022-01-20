@@ -61,13 +61,16 @@
 }
 
 @media screen and (max-width: 500px) {
-    .slide {
+    /* .slide {
         min-width: 50% !important;
+    } */
+    .carousel .slide {
+        min-width: 90% !important;
     }
     .cardCont {
         width: 100%;
         padding: 0 3px 0 3px;
-        border: 2px solid red;
+        /* border: 2px solid red; */
     }
     .card-body {
         width: 100%;

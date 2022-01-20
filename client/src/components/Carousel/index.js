@@ -16,36 +16,15 @@ export default function CarouselComponent() {
 
   return (
     <div className="profileListCont">
-      <h3>Search for a mechanic! </h3>
-
-      {/* <div className="searchForm input-group">
-        <div className="searchFormInput form-outline">
-          <input
-            type="search"
-            id="issueInput"
-            className="form-control"
-            placeholder="i.e. engine, transmission, body work, etc."
-          />
-        </div>
-
-      </div> */}
-
-{/* //         <button type="button" className="btn btn-primary">
-//           Search
-//         </button>
-//       </div> */}
-      {/* Back up styling for <div> immediately below */}
-      {/* className="flex-row justify-space-between my-4" */}
-      {/* this is the list of profiles */}
-    
+      <h3>Search for a mechanic! </h3>    
       <div>
         <Carousel className="carouselProps"
           showStatus={false}
           dynamicHeight={false}
           emulateTouch
           swipeScrollTolerance={100}
-          centerMode
-          centerSlidePercentage={30}
+          centerMode={true}
+          centerSlidePercentage={90}
           showThumbs={false}
           infiniteLoop
           showIndicators
