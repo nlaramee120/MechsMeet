@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_PROFILES = gql`
   query allProfiles {
@@ -10,6 +10,8 @@ export const QUERY_PROFILES = gql`
       about
       location
       skills
+      img
+      phone
     }
   }
 `;
@@ -24,20 +26,44 @@ export const QUERY_SINGLE_PROFILE = gql`
       about
       location
       skills
+      phone
     }
   }
 `;
 
-export const QUERY_PROFILE = gql`
-{
-    profile{
+export const QUERY_ME = gql`
+  query me {
+    me {
       _id
       firstName
       lastName
       email
       about
+      phone
       location
       skills
+      img
+    }
+  }
+`;
+
+export const QUERY_SERVICES = gql`
+  query allServices {
+    services {
+      name
+      priceInCents
+      quantity
+    }
+  }
+`;
+
+export const QUERY_SINGLE_SERVICE = gql`
+  query singleService {
+    service {
+      _id
+      name
+      priceInCents
+      quantity
     }
   }
 `;

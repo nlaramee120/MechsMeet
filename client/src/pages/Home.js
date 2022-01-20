@@ -1,31 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import React from "react";
+import { useQuery } from "@apollo/client";
 
-import ProfileList from '../components/ProfileList';
-import ProfileForm from '../components/ProfileForm';
+// import ProfileList from "../components/ProfileList";
+import ProfileForm from "../components/ProfileForm";
+import Carousel from "../components/Carousel";
+import SearchBox from "../components/SearchBox";
 
-import { QUERY_PROFILES } from '../utils/queries';
+import { QUERY_PROFILES } from "../utils/queries";
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_PROFILES);
   const profiles = data?.profiles || [];
+  
 
   return (
     <main>
       <div className="flex-row justify-center">
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px solid #1a1a1a' }}
-        >
+        <div className="col-12 col-md-10 mb-3 p-3">
           <ProfileForm />
         </div>
-
+      
         <div className="col-12 col-md-10 my-3">
+        <SearchBox placeholder= "Enter Name" data={profiles}/>
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <ProfileList
+            <Carousel
+              // or ProfileList
               profiles={profiles}
               title="Search for mechanics by your issue"
             />
@@ -35,6 +36,7 @@ const Home = () => {
     </main>
   );
 };
+
 
 // import { QUERY_MATCHUPS } from '../utils/queries';
 
@@ -51,5 +53,6 @@ const Home = () => {
 //     </div>
 //   );
 // };
+
 
 export default Home;

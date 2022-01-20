@@ -35,12 +35,21 @@ const profileSchema = new Schema({
     required: false,
     trim: true
   },
+ phone: {
+    type: String,
+    required: false,
+    trim: true
+  },
   skills: [
     {
       type: String,
       trim: true,
     },
   ],
+  img: {
+    type: String,
+    required: false,
+  },
 });
 
 // set up pre-save middleware to create password

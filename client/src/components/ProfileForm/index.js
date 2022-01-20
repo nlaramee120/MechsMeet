@@ -39,28 +39,19 @@ const ProfileForm = () => {
   };
 
   return (
-    <div>
-      <h3>Are you a mechanic?</h3>
-      <form
-        className="signupFormCont flex-row justify-center justify-space-between-md align-center"
-        onSubmit={handleFormSubmit}
-      >
-        <div className="col-12 col-lg-3">
-          <Link className="btn btn-primary" to="/signup">
-            <h1
-              className="m-1"
-              style={{ fontSize: "1rem", textAlign: "center" }}
-            >
-              Start offering your services now!
-            </h1>
-          </Link>
+    <div className="mechSignUp">
+      {/* <img src="/images/group2.jpg" alt="text" /> */}
+      <p className="mechSignUpText">Are you a mechanic?</p>
+        <Link className="btn btn-info" to="/signup">
+          <h1 className="m-1" style={{ fontSize: "1rem", textAlign: "center" }}>
+            Start offering your services now!
+          </h1>
+        </Link>
+      {error && (
+        <div className="col-12 my-3 bg-danger text-white p-3">
+          Something went wrong...
         </div>
-        {error && (
-          <div className="col-12 my-3 bg-danger text-white p-3">
-            Something went wrong...
-          </div>
-        )}
-      </form>
+      )}
     </div>
   );
 

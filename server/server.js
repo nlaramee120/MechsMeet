@@ -7,6 +7,7 @@ const db = require('./config/connection');
 const { typeDefs, resolvers } = require('./schemas');
 const cors = require("cors")
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY)
+// import { QUERY_SINGLE_SERVICE } from '../client/src/utils/queries'
 
 
 
@@ -29,8 +30,13 @@ app.use(express.json());
 app.use(cors())
 
 const storeItems = new Map([
-  [1, { priceInCents: 10000, name: "Learn React Today" }],
-  [2, { priceInCents: 20000, name: "Learn CSS Today" }],
+  [1, { priceInCents: 9500, name: "General Checkup" }],
+  [2, { priceInCents: 13000, name: "Brake Service" }],
+  [3, { priceInCents: 18000, name: "Headlights" }],
+  [4, { priceInCents: 5000, name: "Oil Change" }],
+  [5, { priceInCents: 25000, name: "Paint Job" }],
+  [6, { priceInCents: 2500, name: "Tire Rotation" }],
+  [7, { priceInCents: 2000, name: "Emissions Test" }],
 ])
 
 app.post("/create-checkout-session", async (req, res) => {
@@ -61,7 +67,7 @@ app.post("/create-checkout-session", async (req, res) => {
 })
 
 // Serve up static assets could be useful later
-// app.use('/images', express.static(path.join(__dirname, '../client/images')));
+app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {

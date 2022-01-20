@@ -1,62 +1,67 @@
 [
     {
-      "firstName" :"George",
-      "lastName": "Washington",
-      "email": "george@testmail.com",
+      "firstName" :"Parker",
+      "lastName": "Holburg",
+      "email": "parker@testmail.com",
       "password": "password12345",
-      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fusce ut placerat orci nulla pellentesque dignissim. Habitant morbi tristique senectus et netus et. ",
+      "about": "Hello, my name is Parker. I have been working on cars for over 25 years. I inherited my father's autoshop after many years under his guidance.",
       "location": "Chicago",
-      "skills": ["Brake Service", "Suspension", "General Checkup"]
+      "skills": ["Brake Service", "Tire Rotation", "General Checkup", "Oil Change"],
+      "img": "mech4.png"
     },
     {
-      "firstName" :"Alan",
-      "lastName": "Smith",
-      "email": "alan@testmail.com",
+      "firstName" :"Oliver",
+      "lastName": "Farlay",
+      "email": "oliver@testmail.com",
       "password": "password12345",
-      "about": "Urna nunc id cursus metus aliquam eleifend mi. Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. Pellentesque habitant morbi tristique senectus et netus et malesuada. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. ",
+      "about": "I'm Oliver! Originally from Detroit, I used to work for General Motors but I retired a few years ago, but I still like to work on cars as a side hustle.",
       "location": "Chicago",
-      "skills": ["Headlights", "Brake", "General Checkup"]
+      "skills": ["Headlights", "Brake Service", "General Checkup"],
+      "img": "mech3.png"
     },
     {
-      "firstName" :"Amiko",
-      "lastName": "Smith",
-      "email": "amiko@testmail.com",
+      "firstName" :"Stephan",
+      "lastName": "Walls",
+      "email": "stephan@testmail.com",
       "password": "password12345",
-      "about": "Et tortor at risus viverra adipiscing at in tellus integer. Fames ac turpis egestas sed tempus. Eleifend quam adipiscing vitae proin sagittis.",
+      "about": "I'm Stephan. If you're ride needs a fantastic new paint job, I'm your guy.",
       "location": "Berwyn",
-      "skills": ["General Checkup"]
+      "skills": ["General Checkup, Paint Job"],
+      "img": "mech5.png"
     },
     {
-      "firstName" :"John",
-      "lastName": "Smith",
-      "email": "john@testmail.com",
-      "about": "Amet dipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa eget egestas purus viverra accumsan in nisl. Posuere morbi leo urna molestie at.",
+      "firstName" :"Eugene",
+      "lastName": "Warren",
+      "email": "eugene@testmail.com",
+      "about": "My name is Oliver. Cars are my passion and I love to help people with theirs in my spare time!",
       "location": "Cicero",
       "password": "password12345",
       "skills": [
         "Oil Change",
-        "Paint Job"]
+        "Headlights"],
+        "img": "mech2.png"
     },
     {
-      "firstName" :"Testy",
-      "lastName": "Smith",
-      "email": "testy@testmail.com",
+      "firstName" :"Hal",
+      "lastName": "Valentine II",
+      "email": "hal@testmail.com",
       "password": "password12345",
-      "about": "I can help with your emissions",
+      "about": "The name's Hal the II. I'm confident in my skills. No questions asked.",
       "location": "Skokie",
-      "skills": ["Emissions Test"]
+      "skills": ["Emissions Test", "Tire Rotation", "Oil Change"],
+      "img": "mech1.png"
     },
     {
       "firstName" :"Ed",
       "lastName": "Smith",
       "email": "ed@testmail.com",
       "password": "password12345",
-      "about": "I like cars.",
+      "about": "My name is Ed. I have never been certified but I'm sure I can help you with what you need!",
       "location": "Chicago",
       "skills": [
-        "Oil Change",
-        "Tire Rotation"
-      ]
+        "Brake Service"
+      ],
+      "img": "mech6.png"
     }
   ]
   

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Dropbox from '../components/Dropbox'
 
 // Import the `useParams()` hook
 import { useParams } from "react-router-dom";
@@ -9,6 +10,8 @@ import SkillsList from "../components/SkillsList";
 import "./Pages.css";
 
 import { QUERY_SINGLE_PROFILE } from "../utils/queries";
+
+import { genCheckup, StripeButton } from "../components/Stripe/script";
 
 const Profile = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
@@ -26,32 +29,30 @@ const Profile = () => {
   }
   return (
     <div>
+      <div className="payMechCont">
       <p class="payText">Have services been completed?</p>
 
-      <Link to="/pay">
-        <button
-          type="button"
-          class="payMech btn btn-info"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Pay {profile.firstName} {profile.lastName}
-        </button>
-      </Link>
+      <Dropbox />
+      </div>
 
-      <h2>
-        About {profile.firstName} {profile.lastName}:
-      </h2>
-      <p>
-        {profile.about} 
-      </p>
-      <h2>Location:</h2>
-      <p>{profile.location}</p>
-      <h2>Contact</h2>
-      <p>{profile.email}</p>
-      <h2 className="card-header">Specializations and Skill Sets</h2>
+      <div className="mechInfo">
+        <h3>
+          About {profile.firstName} {profile.lastName}:
+        </h3>
+        <p>{profile.about}</p>
+        <h3>Location:</h3>
+        <p>{profile.location}</p>
+        <h3>Contact Info:</h3>
+        <p>{profile.email}<br></br>{profile.phone} </p>
+        <h3>Specializations and Skill Sets</h3>
 
-      {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
+        {profile.skills?.length > 0 && (
+        <SkillsList
+          skills={profile.skills}
+          isLoggedInUser={false}
+        />
+      )}
+      </div>
     </div>
   );
 };

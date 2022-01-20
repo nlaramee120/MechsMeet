@@ -1,17 +1,76 @@
 /* Profile.js styles */
 
+.payMechCont {
+    margin-top: 15px;
+}
+
 .payText {
     font-size: 15px;
 }
 .payMech {
     font-size: 20px;
-    margin: -15px 0 20px 0;
+    margin-top: -15px
+}
+
+.profileListCont {
+    padding: 20px 0 0 0;
+    /* border-top: 2px solid black; */
+    /* border-bottom: 2px solid black; */
+}
+
+/* myProfile.js */
+
+.mechInfo,
+.myInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0 50px 0;
+    padding: 20px 0 20px 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.profileTitle {
+    margin-top: 25px;
+}
+
+.profilePic {
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.aboutInput {
+    height: 125px;
+}
+
+.updateBtn {
+    margin-top: 10px;
+}
+
+.emailBtn {
+    margin-bottom: 10px;
+}
+
+.phoneFormat {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.addSkill {
+    width: 70%;
 }
 
 /* Signup.js and Login.js styles */
 
-h2 {
+h1 {
+    font-size: 50px;
     margin-top: 10px;
+}
+
+h2 {
+    font-size: 15px;
 }
 
 .formCont {
@@ -19,9 +78,18 @@ h2 {
     flex-direction: column;
     align-items: center;
     margin: 50px 0 50px 0;
+    padding-bottom: 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
 }
 
 .inputField {
+    height: 2rem;
     width: 300px;
     margin-left: 10px;
 }
