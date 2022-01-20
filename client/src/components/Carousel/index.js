@@ -52,8 +52,6 @@ export default function CarouselComponent() {
         >
           {profiles &&
             profiles.map((profile) => (
-              // Back up styling for <div> immediately below
-              // className="card col-12 col-xl-6"
               <div className="cardCont" key={profile._id}>
                 <div className="card-body">
                   <img
