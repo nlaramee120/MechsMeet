@@ -35,7 +35,11 @@ function Login(props) {
       {/* <Link to="/signup">← Go to Signup</Link> */}
 
       <h1>Log In</h1>
-      <h2>Don't have an account? <Link to="/signup">Sign Up</Link></h2>
+      <h2>Don't have an account? <Link className="btn btn-info" to="/signup">
+          <h1 className="m-1" style={{ fontSize: "1rem", textAlign: "center" }}>
+            Start offering your services now!
+          </h1>
+        </Link></h2>
       <form className="formCont" onSubmit={handleFormSubmit}>
         <div className="formItem flex-row space-between my-2">
           <label htmlFor="email">Email address:</label>
