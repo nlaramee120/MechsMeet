@@ -12,7 +12,7 @@ https://github.com/nlaramee120/project_3
 
 ## Table of Contents
 1. [Description](#Description)
-2. [Final Product Image](#Final-Product-Image)
+2. [Final Product Images and Videos](#Final-Product-Images-and-Videos)
 3. [User Story](#User-Story)
 4. [Installation and Instructions](#Installation-and-Instructions)
 5. [License](#License)
@@ -33,7 +33,7 @@ This app answers the notorious question, "***Do you know someone who knows a mec
 
 This app is designed as a networking and servicing app to connect local mechanics and people in need of their services -- similar to Tinder or Skillshare.
 
-## Final Product Image
+## Final Product Images and Videos
 
 - Images of final product/app<br>
 <img src="./client/public/images/readme3.png" alt="Final Product" width="200">
