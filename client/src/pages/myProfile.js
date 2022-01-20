@@ -184,7 +184,7 @@ const Myprofile = () => {
               Phone (<span className="phoneFormat">###-###-####</span>)
             </p>
             <input
-              type="tel"
+              type="text"
               placeholder={profile.phone}
               value={phone}
               className="w-100"
