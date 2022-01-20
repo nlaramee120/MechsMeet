@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type Profile {
@@ -34,19 +34,28 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addProfile(firstName: String!, lastName: String!, email: String!, password: String!, img:String!): Auth
+    addProfile(
+      firstName: String!
+      lastName: String!
+      email: String!
+      password: String!
+      img: String!
+    ): Auth
     addSkill(profileId: ID!, skill: String!): Profile
     removeProfile(profileId: ID!): Profile
     removeSkill(profileId: ID!, skill: String!): Profile
-    updateProfile(firstName: String, lastName: String, email: String, password: String): Profile
-    updateMyAbout(profileId: ID!, about: String!):Profile
-    updateMyLocation(profileId: ID!, location: String!):Profile
-    updateMyEmail(profileId: ID!, email: String!):Profile
-    updateMyPhone(profileId: ID!, phone: String!):Profile
+    updateProfile(
+      firstName: String
+      lastName: String
+      email: String
+      password: String
+    ): Profile
+    updateMyAbout(profileId: ID!, about: String!): Profile
+    updateMyLocation(profileId: ID!, location: String!): Profile
+    updateMyEmail(profileId: ID!, email: String!): Profile
+    updateMyPhone(profileId: ID!, phone: String!): Profile
     login(email: String!, password: String!): Auth
   }
 `;
 
 module.exports = typeDefs;
-
-// about:String!,location:String!

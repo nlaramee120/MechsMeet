@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
-// Import the `useParams()` hook
 import { Redirect, useParams } from "react-router-dom";
 import { useQuery, useMutation } from "@apollo/client";
-
 import SkillsList from "../components/SkillsList";
 import SkillForm from "../components/SkillForm";
 import "./Pages.css";
@@ -28,16 +25,13 @@ const Myprofile = () => {
   const [updateMyPhone] = useMutation(UPDATE_PHONE);
   const [updateMyEmail] = useMutation(UPDATE_EMAIL);
 
-  // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { profileId } = useParams();
 
   const { loading, data } = useQuery(QUERY_ME, {
     variables: { profileId: profileId },
   });
 
-  // const profile = data?.profile || {};
   const profile = data?.me || data?.profile || {};
-  // console.log(data?.me || data?.profile);
   //if not logged in
   if (!data?.me || data?.profile) {
     return (
@@ -49,7 +43,6 @@ const Myprofile = () => {
       </h4>
     );
   }
-  // console.log(data.me, "test");
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -105,14 +98,6 @@ const Myprofile = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
-
-  //   return (
-  //     <h4>
-  //       You need to be logged in to see your profile page. Use the navigation
-  //       links above to sign up or log in!
-  //     </h4>
-  //   );
-  // }
 
   return (
     <div>
@@ -195,9 +180,11 @@ const Myprofile = () => {
           onSubmit={handleFormSubmit4}
         >
           <div className="col-12 col-lg-6">
-            <p>Phone (<span className="phoneFormat">###-###-####</span>)</p>
+            <p>
+              Phone (<span className="phoneFormat">###-###-####</span>)
+            </p>
             <input
-              type="tel"
+              type="text"
               placeholder={profile.phone}
               value={phone}
               className="w-100"

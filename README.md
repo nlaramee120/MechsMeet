@@ -12,13 +12,17 @@ https://github.com/nlaramee120/project_3
 
 ## Table of Contents
 1. [Description](#Description)
-2. [Final Product Image](#Final-Product-Image)
+2. [Final Product Images and Videos](#Final-Product-Images-and-Videos)
 3. [User Story](#User-Story)
 4. [Installation and Instructions](#Installation-and-Instructions)
 5. [License](#License)
-6. [Questions](#Questions)
+6. [Collaborators](#Collaborators)
 
 ## Description
+
+***AS SOMEONE who needs to have their car repaired, but don't know who to go to for help<br>
+I WANT to be able to have an app where I can locate mechanics near me and find one that may have the specialization or skillset to help with my issue<br>
+SO THAT I CAN save time and effort finding information or recommendations from multiple sources for where I should go***
 
 When it comes to car issues, there are two types of car owners in this world:
 
@@ -29,29 +33,38 @@ This app answers the notorious question, "***Do you know someone who knows a mec
 
 This app is designed as a networking and servicing app to connect local mechanics and people in need of their services -- similar to Tinder or Skillshare.
 
-## Final Product Image
+## Final Product Images and Videos
 
-- Images/Videos of final product/app<br>
-<img src="./assets/ss1.png" alt="Final Product" width="900">
+- Images of final product/app<br>
+<img src="./client/public/images/readme3.png" alt="Final Product" width="200">
+<img src="./client/public/images/readme4.png" alt="Final Product" width="200">
+<img src="./client/public/images/readme7.png" alt="Final Product" width="200">
+
+- Video walkthrough of UI/UX for a guest<br>
+<a target="_blank" href="https://watch.screencastify.com/v/LLGl1sEt9pS6r8nOr0lx">Click Here</a>
+- Video walkthrough of UI/UX for a mechanic<br>
+<a target="_blank" href="https://watch.screencastify.com/v/vikKLe5DY3NRf5CgpD0S">Click Here</a>
+
+***While video walkthroughs are recorded on a web browser on a desktop computer, the project was built mobile responsive and may even offer a better experience on a mobile device!***
 
 ## User Story
 ```
 GIVEN a functional app and simple user face
 
 WHEN I first load the app
-THEN I am presented with a simple/minimalist UI for easy navaigation and user-friendly UX experience
+THEN I am presented with a landing page explaining the use case for the app and can be redirected via buttons based on my intentions
 
 ***Mechanic UI/UX***
-WHEN I click "Start offering your services now!"
+WHEN I click "Start offering your services!"
 THEN I am presented with a sign-up page to create a profile as a mechanic, in which I am automatically redirected to my profile page where I can view/edit my personal information.
 
 ***Guest UI/UX***
-WHEN I first load the app
-THEN I am presented with a carousel that will list mechanics near me
+WHEN I click on "Start looking for mechanics!"
+THEN I am presented with a carousel to browse through that will list mechanics who have created accounts to offer their services
     or
-THEN I am presented with an input field where I can enter a specific car issue to narrow/filter my search to specific mechanics with specialitions/skillsets pertaining to my needs
+THEN I am presented with an input field where I can enter a specific name of a mechanic for which I can "jump" to their profile directly
 
-WHEN I click "See profile" on a result within the carousel
+WHEN I click "See profile" on a mechanic's preview within the carousel
 THEN I am presented with more detailed information about the mechanic
 
 WHEN I need to pay a mechanic for services rendered

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
-
 import { ADD_SKILL } from "../../utils/mutations";
 
 const SkillForm = ({ profileId }) => {
@@ -39,10 +38,7 @@ const SkillForm = ({ profileId }) => {
         </div>
 
         <div className="col-12 col-lg-3">
-          <button
-            className="btn btn-info btn-block py-3"
-            type="submit"
-          >
+          <button className="btn btn-info btn-block py-3" type="submit">
             Add
           </button>
         </div>

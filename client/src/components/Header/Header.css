@@ -1,12 +1,11 @@
-header {
+/* .headerCont {
   background-color: #2d3e50;
   padding: 15px 0 15px 0;
-}
+} */
 
 .homeLink {
   width: 6%;
   margin-left: 25px;
-  /* border: 2px solid red; */
 }
 
 .logo {
@@ -17,12 +16,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 2px solid black; */
 }
 
 .navLinks {
   display: flex;
-  /* border: 2px solid blue; */
 }
 
 .headerImg {
@@ -37,9 +34,6 @@ header {
 .logoutBtn {
   color: lightslategray !important;
   width: 130px;
-  /* border: 1px solid lightslategray;
-    border-radius: 3rem;
-    transition: 0.3s; */
 }
 
 .logoutBtn:hover,
@@ -52,6 +46,7 @@ header {
   .homeLink {
     width: 30%;
     margin-left: 0px;
+    margin-bottom: 15px;
   }
   .logo {
     width: 100%;

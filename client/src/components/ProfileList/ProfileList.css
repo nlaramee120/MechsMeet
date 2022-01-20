@@ -6,12 +6,6 @@
     background-color: rgb(255, 180, 40);
 }
 
-/* #issueInput {
-    width: 60%;
-    height: 35px;
-    margin-right: 5px;
-} */
-
 .card-body {
     display: flex;
     flex-direction: column;
@@ -20,14 +14,15 @@
     margin: 20px 20px 20px 20px;
     transition: 0.3s;
     background-color: orange;
-    /* border: 2px solid black; */
     border-radius: 15px;
 }
 
 .cardImg {
-    width: auto;
+    max-width: 25%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    max-height: 25%;
+    
 }
 
 .card-body:hover {
@@ -39,7 +34,7 @@
 }
 
 .seeProfileBtn {
-    width: 90%;
+    width: 25%;
 }
 
 .searchForm {
@@ -52,7 +47,7 @@
 }
 
 .footerCont {
-    height: 80px;
+    height: auto;
     background-color: #2d3e50;
 }
 
@@ -61,13 +56,15 @@
 }
 
 @media screen and (max-width: 500px) {
-    .slide {
+    /* .slide {
         min-width: 50% !important;
+    } */
+    .carousel .slide {
+        min-width: 90% !important;
     }
     .cardCont {
         width: 100%;
         padding: 0 3px 0 3px;
-        border: 2px solid red;
     }
     .card-body {
         width: 100%;
@@ -75,5 +72,12 @@
     }
     .footerCont {
         height: auto;
+    }
+    .cardImg {
+       max-height:100%;
+       max-width: 100%;
+    }
+    .seeProfileBtn {
+        width: 90%;
     }
 }

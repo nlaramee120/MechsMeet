@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { ADD_PROFILE } from "../utils/mutations";
-import "./Pages.css"
-
-
+import "./Pages.css";
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -19,9 +17,7 @@ function Signup(props) {
         password: formState.password,
         firstName: formState.firstName,
         lastName: formState.lastName,
-        img: "avatar.jpeg"
-        // location: formState.location,
-        // about: formState.about,
+        img: "avatar.jpeg",
       },
     });
     const token = mutationResponse.data.addProfile.token;
@@ -38,14 +34,15 @@ function Signup(props) {
 
   return (
     <div className="container my-1">
-      {/* <Link to="/login">← Go to Login</Link> */}
-
       <h1>Sign Up</h1>
-      <h2>Already have an account? <Link to="/login">Log In</Link></h2>
+      <h2>
+        Already have an account? <Link to="/login">Log In</Link>
+      </h2>
       <form className="formCont" onSubmit={handleFormSubmit}>
         <div className="formItem flex-row space-between my-2">
           <label htmlFor="firstName">First Name: </label>
-          <input className="inputField"
+          <input
+            className="inputField"
             placeholder="First"
             name="firstName"
             type="firstName"
@@ -55,7 +52,8 @@ function Signup(props) {
         </div>
         <div className="formItem flex-row space-between my-2">
           <label htmlFor="lastName">Last Name:</label>
-          <input className="inputField"
+          <input
+            className="inputField"
             placeholder="Last"
             name="lastName"
             type="lastName"
@@ -65,7 +63,8 @@ function Signup(props) {
         </div>
         <div className="formItem flex-row space-between my-2">
           <label htmlFor="email">Email:</label>
-          <input className="inputField"
+          <input
+            className="inputField"
             placeholder="email@email.com"
             name="email"
             type="email"
@@ -75,7 +74,8 @@ function Signup(props) {
         </div>
         <div className="formItem flex-row space-between my-2">
           <label htmlFor="pwd">Password:</label>
-          <input className="inputField"
+          <input
+            className="inputField"
             placeholder="********"
             name="password"
             type="password"
@@ -83,28 +83,14 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        {/* <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Location:</label>
-          <input className="inputField"
-            placeholder="City"
-            name="location"
-            type="location"
-            id="location"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">About:</label>
-          <input className="inputField"
-            placeholder="Tell us about yourself"
-            name="about"
-            type="about"
-            id="about"
-            onChange={handleChange}
-          />
-        </div> */}
         <div className="flex-row flex-end">
-          <button className="formBtn m-1 text-dark" style={{ fontSize: "1rem" }} type="submit">Sign Up</button>
+          <button
+            className="formBtn m-1 text-dark"
+            style={{ fontSize: "1rem" }}
+            type="submit"
+          >
+            Sign Up
+          </button>
         </div>
       </form>
     </div>

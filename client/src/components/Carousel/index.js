@@ -2,50 +2,25 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
-
 import { useQuery } from "@apollo/client";
 import { QUERY_PROFILES } from "../../utils/queries";
 import ProfileList from "../ProfileList";
-
 
 export default function CarouselComponent() {
   const { loading, data } = useQuery(QUERY_PROFILES);
   const profiles = data?.profiles || [];
 
- 
-
   return (
     <div className="profileListCont">
-      <h3>Search for a mechanic! </h3>
-
-      {/* <div className="searchForm input-group">
-        <div className="searchFormInput form-outline">
-          <input
-            type="search"
-            id="issueInput"
-            className="form-control"
-            placeholder="i.e. engine, transmission, body work, etc."
-          />
-        </div>
-
-      </div> */}
-
-{/* //         <button type="button" className="btn btn-primary">
-//           Search
-//         </button>
-//       </div> */}
-      {/* Back up styling for <div> immediately below */}
-      {/* className="flex-row justify-space-between my-4" */}
-      {/* this is the list of profiles */}
-    
       <div>
         <Carousel
-          centerMode
+          className="carouselProps"
           showStatus={false}
           dynamicHeight={false}
           emulateTouch
-          swipeScrollTolerance={50}
-          centerSlidePercentage={30}
+          swipeScrollTolerance={100}
+          centerMode={true}
+          centerSlidePercentage={90}
           showThumbs={false}
           infiniteLoop
           showIndicators
