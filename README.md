@@ -35,15 +35,15 @@ This app is designed as a networking and servicing app to connect local mechanic
 
 ## Final Product Image
 
-- Images/Videos of final product/app<br>
-<img src="./client/public/images/readme2.png" alt="Final Product" width="200px"><br>
-<img src="./client/public/images/readme3.png" alt="Final Product" width="200px"><br>
-<img src="./client/public/images/readme4.png" alt="Final Product" width="200px"><br>
-<img src="./client/public/images/readme6.png" alt="Final Product" width="200px"><br>
-<img src="./client/public/images/readme7.png" alt="Final Product" width="200px"><br>
-<img src="./client/public/images/readme8.png" alt="Final Product" width="200px"><br>
-<img src="./client/public/images/readme5.png" alt="Final Product" width="200px"><br>
+- Images of final product/app<br>
+<img src="./client/public/images/readme3.png" alt="Final Product" width="200">
+<img src="./client/public/images/readme4.png" alt="Final Product" width="200">
+<img src="./client/public/images/readme7.png" alt="Final Product" width="200">
 
+- Video walkthrough of UI/UX for a guest<br>
+<a target="_blank" href="https://watch.screencastify.com/v/LLGl1sEt9pS6r8nOr0lx">Click Here</a>
+- Video walkthrough of UI/UX for a mechanic<br>
+<a target="_blank" href="https://watch.screencastify.com/v/vikKLe5DY3NRf5CgpD0S">Click Here</a>
 
 ## User Story
 ```
