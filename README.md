@@ -45,6 +45,8 @@ This app is designed as a networking and servicing app to connect local mechanic
 - Video walkthrough of UI/UX for a mechanic<br>
 <a target="_blank" href="https://watch.screencastify.com/v/vikKLe5DY3NRf5CgpD0S">Click Here</a>
 
+***While video walkthroughs are recorded on a web browser on a desktop computer, the project was built mobile responsive and may even offer a better experience on a mobile device!***
+
 ## User Story
 ```
 GIVEN a functional app and simple user face
