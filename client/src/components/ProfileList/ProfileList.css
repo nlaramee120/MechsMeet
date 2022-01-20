@@ -25,9 +25,11 @@
 }
 
 .cardImg {
-    width: auto;
+    max-width: 25%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    max-height: 25%;
+    
 }
 
 .card-body:hover {
@@ -78,5 +80,10 @@
     }
     .footerCont {
         height: auto;
+    }
+    .cardImg {
+       max-height:100%;
+       max-width: 100%;
+        
     }
 }
