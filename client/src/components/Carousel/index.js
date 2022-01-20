@@ -39,12 +39,12 @@ export default function CarouselComponent() {
       {/* this is the list of profiles */}
     
       <div>
-        <Carousel
-          centerMode
+        <Carousel className="carouselProps"
           showStatus={false}
           dynamicHeight={false}
           emulateTouch
-          swipeScrollTolerance={50}
+          swipeScrollTolerance={100}
+          centerMode
           centerSlidePercentage={30}
           showThumbs={false}
           infiniteLoop
