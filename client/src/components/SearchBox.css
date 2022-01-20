@@ -1,64 +1,53 @@
-/* .searchInputs{
-    display: flex;
-    
-} */
-
-.search{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.search input{
-    flex-direction: column-reverse;
-    background-color:rgb(218, 199, 199);
-    border:0;
-    border-radius: 2px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    font-size: 18px;
-    padding: 15px;
-    width:300px;
-    height:30px
-    
+.search input {
+  flex-direction: column-reverse;
+  background-color: rgb(218, 199, 199);
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 18px;
+  padding: 15px;
+  width: 300px;
+  height: 30px;
 }
 
-input:focus{
-    outline:none;
+input:focus {
+  outline: none;
 }
 
-.dataResult{
-    width: 300px;
-    height: 200px;
-    background-color: teal;
-    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
-    overflow: hidden;
-    overflow-y: auto;
-    margin-top: 5px;
+.dataResult {
+  width: 300px;
+  height: 200px;
+  background-color: teal;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  margin-top: 5px;
 }
 
-.dataResult::-webkit-scrollbar{
-    display: none;
+.dataResult::-webkit-scrollbar {
+  display: none;
 }
-.dataResult .dataItem{
-    width:100%;
-    height:50px;
-    display: flex;
-    align-items: center;
-    color: black;
-
-}
-
-.dataitem  {
-    margin-left:10px;
-    
-   
+.dataResult .dataItem {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: black;
 }
 
+.dataitem {
+  margin-left: 10px;
+}
 
 .searchLinks:hover {
-    background-color: rgb(228, 209, 209);
-    color: #2d2d2d;
-  }
-  
+  background-color: rgb(228, 209, 209);
+  color: #2d2d2d;
+}

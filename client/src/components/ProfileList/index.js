@@ -1,5 +1,4 @@
 import React from "react";
-// Import Link component for all internal application hyperlinks
 import { Link } from "react-router-dom";
 import "./ProfileList.css";
 
