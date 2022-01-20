@@ -38,7 +38,7 @@ function App() {
     <ApolloProvider client={client}>
       {/* Wrap page elements in Router component to keep track of location state */}
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div className="homeBody flex-column justify-flex-start min-100-vh">
           <Header />
           <div className="container">
             {/* Define routes to render different page components at different paths */}
