@@ -20,6 +20,10 @@ https://github.com/nlaramee120/project_3
 
 ## Description
 
+***AS SOMEONE who needs to have their car repaired, but don't know who to go to for help<br>
+I WANT to be able to have an app where I can locate mechanics near me and find one that may have the specialization or skillset to help with my issue<br>
+SO THAT I CAN save time and effort finding information or recommendations from multiple sources for where I should go***
+
 When it comes to car issues, there are two types of car owners in this world:
 
 1) People who refuse to go to a dealership for repair because they refuse to pay an arm and a leg
@@ -32,26 +36,33 @@ This app is designed as a networking and servicing app to connect local mechanic
 ## Final Product Image
 
 - Images/Videos of final product/app<br>
-<img src="./assets/ss1.png" alt="Final Product" width="900">
+<img src="./client/public/images/readme2.png" alt="Final Product" width="200px"><br>
+<img src="./client/public/images/readme3.png" alt="Final Product" width="200px"><br>
+<img src="./client/public/images/readme4.png" alt="Final Product" width="200px"><br>
+<img src="./client/public/images/readme6.png" alt="Final Product" width="200px"><br>
+<img src="./client/public/images/readme7.png" alt="Final Product" width="200px"><br>
+<img src="./client/public/images/readme8.png" alt="Final Product" width="200px"><br>
+<img src="./client/public/images/readme5.png" alt="Final Product" width="200px"><br>
+
 
 ## User Story
 ```
 GIVEN a functional app and simple user face
 
 WHEN I first load the app
-THEN I am presented with a simple/minimalist UI for easy navaigation and user-friendly UX experience
+THEN I am presented with a landing page explaining the use case for the app and can be redirected via buttons based on my intentions
 
 ***Mechanic UI/UX***
-WHEN I click "Start offering your services now!"
+WHEN I click "Start offering your services!"
 THEN I am presented with a sign-up page to create a profile as a mechanic, in which I am automatically redirected to my profile page where I can view/edit my personal information.
 
 ***Guest UI/UX***
-WHEN I first load the app
-THEN I am presented with a carousel that will list mechanics near me
+WHEN I click on "Start looking for mechanics!"
+THEN I am presented with a carousel to browse through that will list mechanics who have created accounts to offer their services
     or
-THEN I am presented with an input field where I can enter a specific car issue to narrow/filter my search to specific mechanics with specialitions/skillsets pertaining to my needs
+THEN I am presented with an input field where I can enter a specific name of a mechanic for which I can "jump" to their profile directly
 
-WHEN I click "See profile" on a result within the carousel
+WHEN I click "See profile" on a mechanic's preview within the carousel
 THEN I am presented with more detailed information about the mechanic
 
 WHEN I need to pay a mechanic for services rendered
