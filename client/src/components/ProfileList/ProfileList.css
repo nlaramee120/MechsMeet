@@ -34,7 +34,7 @@
 }
 
 .seeProfileBtn {
-    width: 90%;
+    width: 25%;
 }
 
 .searchForm {
@@ -76,6 +76,8 @@
     .cardImg {
        max-height:100%;
        max-width: 100%;
-        
+    }
+    .seeProfileBtn {
+        width: 90%;
     }
 }
