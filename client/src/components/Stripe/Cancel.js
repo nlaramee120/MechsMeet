@@ -20,7 +20,7 @@ if (count > 0) {
     )
 } else {
     return (
-        <Redirect to='/' />
+        <Redirect to='/home' />
     )
 }
 }
