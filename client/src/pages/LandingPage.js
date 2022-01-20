@@ -27,6 +27,7 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="intro2">
+      <img className="intro2pic" src="/images/group3.jpg" alt="text" />
         <div className="intro2text">
           <h3>Mechanic with services to offer?</h3>
           <br></br>
@@ -43,7 +44,6 @@ const LandingPage = () => {
             </h1>
           </Link>
         </div>
-        <img className="intro2pic" src="/images/group3.jpg" alt="text" />
       </div>
     </div>
   );
