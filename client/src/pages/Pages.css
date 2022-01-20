@@ -132,7 +132,7 @@ h2 {
 
 .intro2 {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
     margin-bottom: 30px;
 }
@@ -155,3 +155,39 @@ h2 {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+
+@media only screen and (max-width: 1000px) {
+    .intro1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 2px solid red; */
+    }
+    .intro1pic {
+        width: 325px;
+        height: 250px;
+        margin-top: 0px;
+    }
+    .intro1text {
+        width: 325px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .intro2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 2px solid red; */
+    }
+    .intro2pic {
+        width: 325px;
+        height: 250px;
+        margin-top: 0px;
+    }
+    .intro2text {
+        width: 325px;
+        height: auto;
+        margin-top: 0px;
+    }
+};
