@@ -1,9 +1,17 @@
-.searchInputs{
+/* .searchInputs{
     display: flex;
     
+} */
+
+.search{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .search input{
+    flex-direction: column-reverse;
     background-color:rgb(218, 199, 199);
     border:0;
     border-radius: 2px;
