@@ -25,7 +25,7 @@ function SearchBox({ placeholder, data }) {
                 <div className="dataResult">
                     {filteredData.slice(0, 5).map((value, key) =>  {
                         return  < div key={value._id} className="dataItem">
-                            <Link 
+                            <Link className="searchLinks"
 
                                 to={`/profiles/${value._id}`} style={{ textDecoration: 'none', color: ' #FFFF' }}
                             >
