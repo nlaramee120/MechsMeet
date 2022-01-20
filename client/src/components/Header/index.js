@@ -8,7 +8,7 @@ const Header = () => {
   if (Auth.loggedIn())
     return (
       <div>
-        <div className="headerCont text-dark mb-4">
+        <div className="headerCont text-dark mb-4" style={{ backgroundColor: "#2d3e50", padding: "15px 0 15px 0" }}>
           <div className="headerLinks">
             <div className="homeLink">
               <Link to="/home">
@@ -42,7 +42,7 @@ const Header = () => {
   if (!Auth.loggedIn())
     return (
       <div>
-        <div className="headerCont text-dark mb-4">
+        <div className="headerCont text-dark mb-4" style={{ backgroundColor: "#2d3e50", padding: "15px 0 15px 0" }}>
           <div className="headerLinks">
             <div className="homeLink">
               <Link to="/home">
