@@ -6,12 +6,6 @@
     background-color: rgb(255, 180, 40);
 }
 
-/* #issueInput {
-    width: 60%;
-    height: 35px;
-    margin-right: 5px;
-} */
-
 .card-body {
     display: flex;
     flex-direction: column;

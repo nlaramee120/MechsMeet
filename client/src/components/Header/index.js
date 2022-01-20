@@ -8,7 +8,7 @@ const Header = () => {
   if (Auth.loggedIn())
     return (
       <div>
-        <header className="headerCont text-dark mb-4">
+        <header className="header text-dark mb-4">
           <div className="headerLinks">
             <div className="homeLink">
               <Link to="/home">
