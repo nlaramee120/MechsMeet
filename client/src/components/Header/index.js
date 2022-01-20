@@ -8,7 +8,7 @@ const Header = () => {
   if (Auth.loggedIn())
     return (
       <div>
-        <header className="header text-dark mb-4">
+        <div className="headerCont text-dark mb-4">
           <div className="headerLinks">
             <div className="homeLink">
               <Link to="/home">
@@ -34,7 +34,7 @@ const Header = () => {
           {/* <p className="headerQuote m-0" style={{ fontSize: "1rem", fontWeight: "700" }}>
         Find your man (or woman) in uniform...
       </p> */}
-        </header>
+        </div>
         {/* <img className="headerImg" src="/images/group2crop.png" alt="text" /> */}
       </div>
     );
@@ -42,7 +42,7 @@ const Header = () => {
   if (!Auth.loggedIn())
     return (
       <div>
-        <header className="header text-dark mb-4">
+        <div className="headerCont text-dark mb-4">
           <div className="headerLinks">
             <div className="homeLink">
               <Link to="/home">
@@ -57,7 +57,7 @@ const Header = () => {
               </Link>
             </div>
           </div>
-        </header>
+        </div>
         {/* <img className="headerImg" src="/images/group2crop.png" alt="text" /> */}
       </div>
     );
